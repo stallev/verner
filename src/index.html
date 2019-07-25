@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container container--header">
+      <div class="header__upper">
+        <div class="header__logo-toggle">
+            <div class="logo logo--header">
+              <picture class="logo__image logo__image--header">
+                <source media="(min-width: 768px)" srcset="img/decor/logo-tablet.png">
+                <source media="(min-width: 1360px)" srcset="img/decor/logo-desktop.png">
+                <img src="img/decor/logo.png" alt="logo">
+              </picture>
+            </div>
+            <div class="header__toggle">
+              <button class="header__toggle-button header__toggle-button--cross"></button>
+              <button class="header__toggle-button header__toggle-button--hamburger"></button>
+            </div>
+
+          </div>
+        <nav class="nav nav--header">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">главная</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">преимущества</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">портфолио</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">наши услуги</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">отзывы</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__bottom">
+        <div class="page-title">
+            <h1 class="page-title__title">
+              Дизайн интерьеров
+            </h1>
+            <p class="page-title__description">
+              Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+            </p>
+          </div>
+          <a href="#" class="header__bottom-menu-link">
+            ЗАКАЗАТЬ ДИЗАЙН
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+  </main>
+  <footer class="footer">
+    <div class="container container--footer">
+      <div class="footer__content">
+        <div class="logo logo--footer">
+          <img src="../img/decor/logo-footer.png" alt="logo" class="logo__image logo__image--footer">
+        </div>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link footer__social-link--vk"></a>
+          <a href="#" class="footer__social-link footer__social-link--instagram"></a>
+          <a href="#" class="footer__social-link footer__social-link--facebook"></a>
+        </div>
+        <div class="footer__info">
+          <p class="footer__copyright">BRUME interior, 2017 &nbsp; &copy;</p>
+          <p class="footer__author-design">HolodnayaDesign</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/vendors.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

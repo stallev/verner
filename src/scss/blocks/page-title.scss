@@ -1,0 +1,42 @@
+.page-title{
+  text-align: center;
+  &__title{
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: $section-title-ff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48.19px;
+    // Text style for "Дизайн  ,"
+    letter-spacing: 0.26px;
+  }
+  &__description{
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-family: $header-descr-ff;
+    font-size: 18px;
+    font-weight: 400;
+    // Text style for "В, оплотим"
+    letter-spacing: 1.21px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .page-title{
+    margin-bottom: 38px;
+    &__title{
+      padding-bottom: 40px;
+      font-size: 100px;
+      line-height: 100px;
+      letter-spacing: 9px;
+    }
+    &__description{
+      padding: 0 50px;
+      font-size: 26px;
+      font-weight: 600;
+      /* Text style for "В, оплотим" */
+      letter-spacing: 2.1px;
+    }
+  }
+}
+@media (min-width: $desctop-width) {
+}

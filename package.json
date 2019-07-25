@@ -1,37 +1,38 @@
 {
-  "name": "start2",
+  "name": "loftblog-automate-demo",
   "version": "1.0.0",
-  "description": "стартовый репозиторий",
-  "main": "gulpfile.js",
-  "scripts": {
-    "server": "gulp server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stallev/start2.git"
-  },
-  "author": "stallev",
+  "description": "Демо автоматизации с gulp 4",
+  "author": "Nikolay Gromov",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stallev/start2/issues"
+  "scripts": {
+    "start": "gulp"
   },
-  "homepage": "https://github.com/stallev/start2#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
-    "bootstrap-sass": "^3.4.1",
-    "browser-sync": "^2.26.7",
-    "del": "^4.1.1",
-    "gulp": "^4.0.2",
-    "gulp-csscomb": "^3.0.8",
-    "gulp-csso": "^3.0.1",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^6.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp.spritesmith": "^6.10.1",
-    "merge2": "^1.2.3",
-    "run-sequence": "^2.2.1"
+    "autoprefixer": "^8.5.1",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#v4.0.0-alpha.3",
+    "gulp-babel": "^7.0.0",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9"
   }
 }
