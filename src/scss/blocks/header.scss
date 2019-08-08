@@ -1,0 +1,112 @@
+.header{
+}
+.header__upper{
+  padding-top: 11px;
+  padding-bottom: 39px;
+  background-color: #112537;
+  opacity: 0.88;
+}
+.header__logo-toggle{
+  display: flex;
+  height: 115px;
+}
+.header__toggle{
+  position: relative;
+  padding: 15px 0 0 15px;
+  width: 70px;
+  &-button{
+    position: absolute;
+    width: 32px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &--cross{
+      display: none;
+      background-image: url("../img/decor/close.png");
+    }
+    &--hamburger{
+      background-image: url("../img/decor/hamburger.png");
+    }
+  }
+}
+.header__bottom{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 42px;
+  background-color: #112537;
+  opacity: 0.88;
+  &-menu-link{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 130px;
+    width: 223px;
+    height: 59px;
+    box-sizing: border-box;
+    padding: 7px 0px;
+    box-shadow: 5px 8px 21px 8px rgba(0, 1, 6, 0.06);
+    background-color: #f8a25a;
+    opacity: 1;
+    color: #ffffff;
+    font-family: $link-ff;
+    font-size: 14px;
+    line-height: 55px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    // Text style for "ЗАКАЗАТЬ Д"
+    letter-spacing: 1.34px;
+    &:after{
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 58px;
+      top: 90px;
+      left: 100px;
+      background-image: url("../img/decor/ArrowDown-icon.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+@media (min-width: $tablet-width) {
+  .header{
+    &__upper{
+      padding-top: 50px;
+      padding-bottom: 132px;
+    }
+    &__logo-toggle{
+      justify-content: space-between;
+    }
+    &__toggle{
+      width: 68px;
+      height: 45px;
+      margin-right: 50px;
+      margin-top: -2px;
+    }
+    &__toggle-button--hamburger{
+      width: 89px;
+      height: 58px;
+      background-size: 58px 37px;
+    }
+    &__bottom{
+      padding-bottom: 183px;
+    }
+    &__bottom-menu-link{
+      width: 439px;
+      height: 110px;
+      font-size: 30px;
+      line-height: 90px;
+      letter-spacing: 1.56px;
+      font-weight: 700;
+      &:after{
+        width: 20px;
+        height: 82px;
+        top: 213px;
+        left: 203px;
+      }
+    }
+  }
+}
+@media (min-width: $desctop-width) {
+}

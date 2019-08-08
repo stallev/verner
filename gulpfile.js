@@ -1,107 +1,144 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var server = require('browser-sync').create();
-var csso = require('gulp-csso');
-var gulpMerge = require('merge2');
-var cssComb = require('gulp-csscomb');
-var spritesmith = require('gulp.spritesmith');
-var imagemin = require('gulp-imagemin');
-var run = require('run-sequence');
-var del = require('del');
-var rename = require('gulp-rename');
-var ghPages = require('gulp-gh-pages');
+const gulp = require('gulp');
 
-gulp.task('style', function() {
-  gulp.src('sass/style.scss')
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const groupMediaQueries = require('gulp-group-css-media-queries');
+const cleanCSS = require('gulp-cleancss');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const replace = require('gulp-replace');
+const del = require('del');
+const plumber = require('gulp-plumber');
+const browserSync = require('browser-sync').create();
+
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
+const imagemin = require('gulp-imagemin');
+
+const paths =  {
+  src: './src/',              // paths.src
+  build: './build/'           // paths.build
+};
+
+function styles() {
+  return gulp.src(paths.src + 'scss/style.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+    .pipe(sassGlob())
+    .pipe(sass()) // { outputStyle: 'compressed' }
+    .pipe(groupMediaQueries())
     .pipe(postcss([
-      autoprefixer({browsers: [
-        'last 2 versions'
-      ]})
+      autoprefixer({browsers: ['last 2 version']}),
     ]))
-    .pipe(cssComb())
-    .pipe(gulp.dest('build/css'))
-    .pipe(csso())
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css'))
-    .pipe(server.stream());
-});
+    .pipe(cleanCSS())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest(paths.build + 'css/'));
+}
 
-gulp.task('serve', ['style'], function() {
-  server.init({
-    server: 'build',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-  
-  gulp.watch('sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('*.html', ['copyHtml']);
-  gulp.watch('build/*.html').on('change', server.reload);
-});
+function svgSprite() {
+  return gulp.src(paths.src + 'svg/*.svg')
+    .pipe(svgmin(function (file) {
+      return {
+        plugins: [{
+          cleanupIDs: {
+            minify: true
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename('sprite-svg.svg'))
+    .pipe(gulp.dest(paths.build + 'img/'));
+}
 
-gulp.task('copy', function(){
+function scripts() {
+  return gulp.src(paths.src + 'js/*.js')
+    .pipe(plumber())
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(uglify())
+    .pipe(concat('script.min.js'))
+    .pipe(gulp.dest(paths.build + 'js/'))
+}
+
+function copyFonts() {
+  return gulp.src(paths.src + 'fonts/*.{woff,woff2}')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.build + 'fonts/'))
+}
+
+function scriptsVendors() {
   return gulp.src([
-    'fonts/**/*.{eot,svg,ttf,woff,woff2}',
-    'js/**',
-    'img/*.svg',
-    '*.html'
-  ], {
-    base: '.'
-  })
-    .pipe(gulp.dest('build'));
-});
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/svg4everybody/dist/svg4everybody.min.js'
+    ])
+    .pipe(concat('vendors.min.js'))
+    .pipe(gulp.dest(paths.build + 'js/'))
+}
 
-gulp.task('sprite', function () {
-  var spriteData = gulp.src('img/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    cssName: 'sprite.css'
-  }));
-  var imgStream = spriteData.img
-    .pipe(gulp.dest('img/'));
-  var cssStream = spriteData.css
-    .pipe(gulp.dest('sass/global/'));
-  return gulpMerge(imgStream, cssStream);
-});
+function htmls() {
+  return gulp.src(paths.src + '*.html')
+    .pipe(plumber())
+    .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
+    .pipe(gulp.dest(paths.build));
+}
 
-gulp.task('copyBootstrapJS', function(){
-  return gulp.src(['node_modules/bootstrap-sass/assets/javascripts/*.js'])
-    .pipe(gulp.dest('build/js'));
-});
-
-gulp.task('clean', function(){
-  return del('build/img');
-});
-
-gulp.task('copyHtml', function(){
-  return gulp.src(['*.html'], {base: '.'})
-    .pipe(gulp.dest('build'));
-});
-
-gulp.task('images', function() {
-  return gulp.src('img/**/*.{jpg,png,gif}')
+function images() {
+  return gulp.src('src/img/**/*.{jpg,png,gif}')
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
     ]))
     .pipe(gulp.dest('build/img'));
-});
+};
 
-gulp.task('build', function(fn){
-  run('clean', 'copy', 'copyBootstrapJS', 'images', 'style', fn);
-});
+function clean() {
+  return del('build/')
+}
 
-gulp.task('server', function(){
-  run('build', 'serve');
-});
-gulp.task('deploy', function() {
-  return gulp.src('build/**/*')
-    .pipe(ghPages());
-});
+function watch() {
+  gulp.watch(paths.src + 'scss/**/*.scss', styles);
+  gulp.watch(paths.src + 'js/*.js', scripts);
+  gulp.watch(paths.src + '*.html', htmls);
+}
+
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: paths.build
+    }
+  });
+  browserSync.watch(paths.build + '**/*.*', browserSync.reload);
+}
+
+exports.styles = styles;
+exports.scripts = scripts;
+exports.scriptsVendors = scriptsVendors;
+exports.htmls = htmls;
+exports.images = images;
+exports.svgSprite = svgSprite;
+exports.clean = clean;
+exports.watch = watch;
+
+gulp.task('build', gulp.series(
+  clean,
+  gulp.parallel(styles, svgSprite, scripts, scriptsVendors, htmls, copyFonts, images)
+));
+
+gulp.task('default', gulp.series(
+  clean,
+  gulp.parallel(styles, svgSprite, scripts, scriptsVendors, htmls, copyFonts, images),
+  gulp.parallel(watch, serve)
+));

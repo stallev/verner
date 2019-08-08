@@ -1,0 +1,11 @@
+@mixin for-tablet-width {
+  @media (min-width: $tablet-width) { @content; }
+}
+@mixin respond-to($media) {
+  @if $media == tabletAndWider {
+    @media only screen and (min-width: $tablet-width) { @content; }
+  }
+  @else if $media == desctop {
+    @media only screen and (min-width: $desctop-width) { @content; }
+  }
+}
