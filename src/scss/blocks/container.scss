@@ -2,78 +2,10 @@
   width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
-  &--header{
-    background-image: url("../img/content/head-slide1.png");
-    background-position: -531px 20px;
-    background-repeat: no-repeat;
-  }
-  &--portfolio-slider{
-    padding-top: 40px;
-  }
-  &--service{
-    padding-top: 42px;
-    @include respond-to(tabletAndWider){
-      padding-top: 132px;
-      padding-bottom: 120px;
-    }
-  }
-  &--contacts{
-    background-image: url("../img/content/kitchen-brume.png");
-    background-position: -531px 20px;
-    background-repeat: no-repeat;
-    @include respond-to(tabletAndWider){
-      background-position: 45px 0px;
-      background-size: 110%;
-    }
-  }
-  &--video{
-    height: 620px;
-    background-image: url("../img/content/video.jpg");
-    background-repeat: no-repeat;
-    background-size: 509%;
-    background-position-x: -426px;
-    @include respond-to(tabletAndWider){
-      height: auto;
-      background-size: 260%;
-      background-position-x: -229px;
-      background-position-y: 0px;
-    }
-  }
-  &--stages-of-work{
-    padding-top: 81px;
-    padding-bottom: 63px;
-    @include respond-to(tabletAndWider){
-      padding-top: 180px;
-      padding-bottom: 116px;
-    }
-  }
-  &--reviews{
-    padding: 103px 0 31px;
-    @include respond-to(tabletAndWider){
-      padding-top: 144px;
-    }
-  }
-  &--reviews-list{
-    @include respond-to(tabletAndWider){
-      padding: 0;
-      overflow-x: hidden;
-    }
-  }
-  &--footer{
-    padding: 50px 30px 40px;
-    background-color: #182c3d;
-    @include respond-to(tabletAndWider){
-      padding-top: 78px;
-    }
-  }
 }
 @media (min-width: $tablet-width) {
   .container{
     width: 768px;
-    &--header{
-      background-size: 174%;
-      background-position: -468px 0px;
-    }
   }
 }
 @media (min-width: $desctop-width) {
