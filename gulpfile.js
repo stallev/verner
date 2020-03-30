@@ -96,7 +96,7 @@ function htmls() {
 }
 
 function images() {
-  return gulp.src('src/img/**/*.{jpg,png,gif}')
+  return gulp.src('src/img/**/*.{jpg,png,gif,svg}')
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
