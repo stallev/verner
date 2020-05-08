@@ -1,7 +1,10 @@
 img{
   max-width: 100%;
 }
-div{
+body{
+  margin: 0;
+}
+div, p, ul, article, li{
   box-sizing: border-box;
 }
 a{
