@@ -1,0 +1,55 @@
+.discounts{
+  position: relative;
+  min-height: 400px;
+  background-image: url("../img/content/slide1.webp");
+  background-size: 100%;
+  background-position: 50% 45%;
+  &__img-wrap{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+  }
+  &__bg-image{
+    display: block;
+    object-fit: cover;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-bottom: 15px;
+  }
+  &__addition{
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  &__title{
+    margin-bottom: 7.5px;
+    font-family: $title-ff;
+    font-size: 3.2rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__action-block{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media only screen and (min-width: 765px){
+  .discounts{
+    height: 650px;
+    &__addition{
+      font-size: 1.7rem;
+    }
+    &__title{
+      font-size: 6.4rem;
+    }
+  }
+}

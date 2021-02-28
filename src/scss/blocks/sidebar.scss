@@ -1,0 +1,133 @@
+.sidebar{
+  position: fixed;
+  padding-left: 10px;
+  left: 0px;
+  display: none;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  width: 270px;
+  transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-name: appearMobileMenu-animation;
+  animation-duration: 1s;
+  z-index: 51;
+  &--hide{
+    animation-name: hideMobileMenu-animation;
+    animation-duration: 1s;
+  }
+  box-sizing: border-box;
+  &__controls{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 45px 0;
+    border-bottom: 1px solid rgb(49, 48, 48);
+  }
+  &__title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700px;
+    line-height: 2.2;
+    letter-spacing: 2.5px;
+  }
+  &__item input{
+    display: none;
+  }
+  &__items-list{
+  }
+  &__group-controls input{
+    display: none;
+  }
+  &__group-controls label{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 2px;
+    font-size: 1.8rem;
+    line-height: 2.5;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+    &::after,
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 11px;
+      height: 2px;
+      background-color: #000;
+      z-index: 2;
+    }
+  }
+  &__item label{
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 30px;
+    font-size: 1.6rem;
+    line-height: 1;
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      left: 5px;
+      top: 9px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgb(26, 24, 24);
+      background-color: transparent;
+    }
+  }
+}
+div.sidebar__group-controls > input[type="checkbox"] + label::before{
+  transform: rotate(-45deg);
+  right: 5px;
+  top: 22px;
+}
+div.sidebar__group-controls > input[type="checkbox"] + label::after{
+  transform: rotate(45deg);
+  right: 12px;
+  top: 22px;
+}
+div.sidebar__group-controls > input[type="checkbox"]:checked + label::before{
+  transform: rotate(45deg);
+  right: 5px;
+  top: 22px;
+}
+div.sidebar__group-controls > input[type="checkbox"]:checked + label::after{
+  transform: rotate(315deg);
+  right: 12px;
+  top: 22px;
+}
+li.sidebar__item > input[type="checkbox"]:checked + label::before{
+  background-color: #000;
+}
+.sidebar__list--is-close{
+  display: none;
+  transition: width 0.3s ease-out;
+}
+@media only screen and (min-width: 765px){
+  .sidebar{
+    position: static;
+    animation: none;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding-right: 5px;
+    &__controls{
+      display: none;
+    }
+    &__group{
+      width: 100%;
+    }
+  }
+  .fixed-sidebar{
+    position: fixed;
+    top: 160px;
+  }
+}

@@ -1,2 +1,226 @@
 .header{
+  &__upper{
+    padding-top: 10px;
+    display: none;
+  }
+  &__bottom{
+    padding: 8px 0;
+  }
+  &__bottom-srch-wdg-tablet{
+    display: none;
+  }
+  &__bottom-srch-form-inner-wrap{
+    display: flex;
+    height: 100%;
+  }
+  &__search-input{
+    display: block;
+    padding: 10px 15px;
+    font-size: 2rem;
+    flex-grow: 1;
+    border: none;
+  }
+  &__search-btn{
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+  }
+  //search form
+  &__bottom-srch-form-out-wrap{
+    display: none;
+    height: 45px;
+  }
+  &__menu-toggle{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__search-btn-left{
+    display: none;
+  }
+  &__bottom{
+    background-color: #fff;
+    z-index: 50;
+    padding-bottom: 20px;
+  }
+  &__bottom-wdg-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  //главное меню для мобильных устройств
+  &__mobile-menu{
+    position: fixed;
+    left: 0px;
+    display: none;
+    height: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    min-width: 80%;
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-name: appearMobileMenu-animation;
+    animation-duration: 1s;
+    z-index: 51;
+    &--hide{
+      animation-name: hideMobileMenu-animation;
+      animation-duration: 1s;
+    }
+  }
+  &__mobile-menu-controls{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+  }
+  &__nav-menu-hidden-item{
+    position: relative;
+    font-size: 1.5rem;
+    font-family: $content-ff;
+    letter-spacing: 0.2rem;
+    line-height: 4.5rem;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid #e8e8e1;
+    }
+  }
+  &__nav-menu-hidden-link{
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    padding-left: 20px;
+  }
+  &__nav-menu-hidden-item--logging{
+    line-height: 5rem;
+  }
+  &__nav-menu-hidden-item--logging a{
+    text-transform: none;
+  }
+  &__mobile-menu-social{
+    display: flex;
+    margin-left: 25px;
+  }
+  &__mobile-menu-social-item{
+    flex: 0 1 33.33%;
+    text-align: center;
+    border: 1px solid #e8e8e1;
+    margin: 0 0 -1px;
+    & a{
+      display: block;
+      padding: 8px 30px;
+    }
+    & svg{
+      position: relative;
+      top: -1px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      fill: currentColor;
+    }
+  }
+  
+  &__nav-menu-hidden-item{
+    position: relative;
+    font-size: 1.5rem;
+    font-family: $content-ff;
+    letter-spacing: 0.2rem;
+    line-height: 4.5rem;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid #e8e8e1;
+    }
+  }
+  &__bottom-right-part a{
+    display: block;
+  }
+  &__bottom-right-part{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__bottom-right-part svg{
+    width: 30px;
+    height: 30px;
+  }
+  &__bottom-srch-wdg-mobile{
+    display: flex;
+    align-items: center;
+  }
+  &__bottom-srch-wdg-mobile-link{
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/decor/search-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__bottom-cart-wdg{
+    display: flex;
+    align-items: center;
+  }
 }
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+@keyframes appearMobileMenu-animation {
+  0%{
+    top: 0;
+    left: -500px;
+  }
+  100%{
+    top: 0;
+    bottom: 100px;
+  }
+}
+@keyframes hideMobileMenu-animation {
+  0%{
+    top: 0;    
+  }
+  100%{
+    top: 0;
+    left: -500px;
+  }
+}
+@media only screen and (min-width: 765px){
+  .header{
+    &__upper{
+      display: block;
+      justify-content: flex-end;
+    }
+    &__upper-social{
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__upper-social a{
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-left: 25px;
+    }
+    &__bottom-srch-form-out-wrap{
+      height: 70px;
+    }
+    &__menu-toggle-humburger{
+      display: none;
+    }
+    &__search-btn-left{
+      display: block;
+    }
+  }
+  .header__bottom-right-part .header__search-btn{
+    display: none;
+  }
+}
+// .content {
+//   padding: 16px;
+// }
+// .sticky + .content {
+//   padding-top: 102px;
+// }

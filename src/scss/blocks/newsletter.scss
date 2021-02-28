@@ -1,0 +1,47 @@
+.newsletter{
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  color: #1c1d1d;
+  &__title{
+    margin-bottom: 7.5px;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: $title-ff;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &__descr{
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.1px;
+    line-height: 1.6;
+  }
+  &__form{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  &__form-wrap{
+    display: flex;
+  }
+  &__form-input{
+    display: block;
+    border: 1px solid #e8e8e1;
+    max-width: 100%;
+    padding: 8px 10px;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  &__form-submit{
+    display: block;
+    width: 52px;
+    padding: 9px 17px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #111;
+    text-align: center;
+    line-height: 30px;
+  }
+}

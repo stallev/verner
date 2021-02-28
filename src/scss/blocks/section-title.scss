@@ -1,2 +1,54 @@
 .section-title{
+  margin-bottom: 20px;
+  &__addition{
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.122rem;
+    font-family: $content-ff;
+    letter-spacing: 0.025em;
+    line-height: 1.6;
+    text-rendering: optimizeSpeed;
+    text-transform: uppercase;
+  }
+  &__link{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 8px 14px;
+    background-position: 150% 45%;
+    min-width: 90px;
+    color: #000;
+    border: 1px solid #e8e8e1;
+    line-height: 1.42;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  &__text{
+    margin: 7.5px 0;
+    text-align: center;
+    font-size: 2.49rem;
+    font-family: $title-ff;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 765px){
+  .section-title{
+    &__addition{
+      font-size: 1.32rem;
+    }
+    &__text{
+      font-size: 3.3rem;
+    }
+  }
+}
+@media only screen and (min-width: 960px){
+  .section-title{
+    margin-bottom: 30px;
+  }
 }

@@ -1,0 +1,14 @@
+.about{
+  &__inner-wrap{
+    height: 975px;
+    background-image: url(../img/content/map.webp);
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 765px){
+  .about{
+    &__inner-wrap{
+      height: 500px;
+    }
+  }
+}

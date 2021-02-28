@@ -1,0 +1,15 @@
+.introduction-section{
+  &__inner-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+@media only screen and (min-width: 770px){
+  .introduction-section{
+    &__inner-wrap{
+      padding: 75px 0;
+    }
+  }
+}

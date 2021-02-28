@@ -1,0 +1,11 @@
+.icon-hamburger path,
+.icon-close path{
+  fill: none !important;
+  stroke-width: 2px;
+  stroke: currentColor !important;
+  stroke-linecap: miter;
+  stroke-linejoin: miter;
+}
+.icon__fallback-text{
+  display: none;
+}

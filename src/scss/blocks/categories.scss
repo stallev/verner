@@ -1,0 +1,39 @@
+.categories{
+  margin-bottom: 25px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__item{
+    position: relative;
+    width: 47%;
+    margin-bottom: 20px;
+  }
+  &__item-name{
+    position: absolute;
+    display: inline-block;
+    bottom: 15px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    background-color: #fff;
+    box-decoration-break: clone;
+    padding: 8px 15px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+@media only screen and (min-width: 765px){
+  .categories{
+    margin-bottom: 50px;
+    &__list{
+      flex-wrap: nowrap;
+    }
+    &__item{
+      width: 24%;
+      margin-bottom: 30px;
+    }
+  }
+}

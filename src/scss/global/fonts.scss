@@ -1,56 +1,40 @@
 @font-face {
-  font-family: "Playfair Display";
-  src: url('../fonts/Playfair-Display-Bold.woff2') format('woff2'),
-  url('../fonts/Playfair-Display-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
-  url('../fonts/Raleway-Bold.woff.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway - Extra Bold";
-  src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
-  url('../fonts/Raleway-ExtraBold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url('../fonts/Raleway-Light.woff2') format('woff2'),
-  url('../fonts/Raleway-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-Medium.woff2') format('woff2'),
-  url('../fonts/Raleway-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
-  url('../fonts/Raleway-Regular.woff') format('woff');
+  font-family: Tiemann;
   font-weight: 400;
   font-style: normal;
+  src: url('../fonts/TiemannRegular.woff2') format('woff2'),
+  url('../fonts/TiemannRegular.woff') format('woff');
 }
-@font-face {
-  font-family: "Raleway - Semi Bold";
-  src: url('../fonts/Raleway-SemiBold.woff2') format('woff2'),
-  url('../fonts/Raleway-SemiBold.woff') format('woff');
+
+  @font-face {
+  font-family: Futura;
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/FuturaRegular.woff2') format('woff2'),
+  url('../fonts/FuturaRegular.woff') format('woff');
+}
+
+
+  @font-face {
+  font-family: Futura;
   font-weight: 600;
   font-style: normal;
+  src: url('../fonts/FuturaSemiBold.woff2') format('woff2'),
+  url('../fonts/FuturaSemiBold.woff') format('woff');
 }
-@font-face {
-  font-family: "Muller Thin";
-  src: url('../fonts/MullerThin.woff2') format('woff2'),
-  url('../fonts/MullerThin.woff') format('woff');
+
+  @font-face {
+  font-family: Futura;
   font-weight: 400;
-  font-style: normal;
+  font-style: oblique;
+  src: url('../fonts/FuturaOblique.woff2') format('woff2'),
+  url('../fonts/FuturaOblique.woff') format('woff');
+}
+
+  @font-face {
+  font-family: Futura;
+  font-weight: 600;
+  font-style: oblique;
+  src: url('../fonts/FuturaSemiBoldOblique.woff2') format('woff2'),
+  url('../fonts/FuturaSemiBoldOblique.woff') format('woff');
 }

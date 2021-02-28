@@ -1,0 +1,43 @@
+.action{
+  display: block;
+  display: inline-block;
+  font-size: 1.1rem;
+  width: fit-content;
+  line-height: 1.42;
+  text-decoration: none;
+  text-align: center;
+  white-space: normal;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding: 9px 17px;
+  margin: 0;
+  min-width: 90px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  user-select: none;
+  border-radius: 0;
+  color: #fff;
+  background: #111;
+  &--discounts:nth-of-type(1){
+    margin-right: 10px;
+  }
+  &--collections{
+    display: block;
+    background-color: transparent;
+    border: 2px solid #fff;
+  }
+}
+@media only screen and (min-width: 765px){
+  .action{
+    &--intro{
+      
+    }
+  }
+  .action--discounts:nth-of-type(1){
+    margin-right: 20px;
+  }
+}

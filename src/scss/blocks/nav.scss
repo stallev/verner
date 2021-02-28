@@ -1,3 +1,41 @@
 .nav{
   display: none;
 }
+@media only screen and (min-width: 769px){
+  .nav{
+    display: flex;
+    justify-content: center;
+  }
+  .nav__list{
+    display: flex;
+  }
+  .nav__link{
+    position: relative;
+    display: inline-block;
+    font-family: $content-ff;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 7.5px 15px;
+    white-space: nowrap;
+    color: #000;
+    cursor: pointer;
+    &::after{
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0; 
+      width: 0;
+      height: 2px; 
+      background-color: #000; 
+      content: "";
+      transition: width 0.3s ease-out;
+    }
+    &:hover::after,
+    &:focus::after{
+      width: 100%;
+    }
+  }
+}
