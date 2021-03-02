@@ -22,8 +22,15 @@
   border-radius: 0;
   color: #fff;
   background: #111;
+  transition: background 0.2s ease 0s;
+  //transform: skewX(-20deg);
   &--discounts:nth-of-type(1){
     margin-right: 10px;
+  }
+  &:hover{
+    animation-name: hover-btn-animation;
+    animation-duration: 2s;
+    background: rgb(88, 87, 87);
   }
   &--collections{
     display: block;
@@ -31,7 +38,18 @@
     border: 2px solid #fff;
   }
 }
-@media only screen and (min-width: 765px){
+@keyframes hover-btn-animation {
+  0%{
+    background: #111;
+  }
+  50%{
+    background: rgb(163, 162, 162);
+  }
+  100%{
+    background: rgb(88, 87, 87);
+  }
+}
+@media only screen and (min-width: 769px){
   .action{
     &--intro{
       

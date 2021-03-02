@@ -1,0 +1,60 @@
+.contact-block{
+  display: flex;
+  flex-direction: column;
+  &__start-chat-link{
+    display: block;
+    width: fit-content;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e8e8e1;
+    font-size: 1.6rem;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__form-out-wrap{
+    padding-bottom: 40px;
+  }
+  &__person-info{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &__form input,
+  &__form textarea{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e8e8e1;
+    font-size: 1.8rem;
+  }
+  &__form textarea{
+    margin-bottom: 30px;
+  }
+  &__person-name{
+    margin-bottom: 25px;
+  }
+  &__map{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px){
+  .contact-block{
+    &__form-out-wrap{
+      padding-bottom: 60px;
+    }
+    &__person-info{
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    &__person-name{
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+    &__form textarea{
+      margin-bottom: 40px;
+    }
+  }
+}

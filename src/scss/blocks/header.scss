@@ -3,6 +3,11 @@
     padding-top: 10px;
     display: none;
   }
+  &__upper-social-link{
+    display: block;
+    width: 14px;
+    height: 14px;
+  }
   &__bottom{
     padding: 8px 0;
   }
@@ -18,7 +23,8 @@
     padding: 10px 15px;
     font-size: 2rem;
     flex-grow: 1;
-    border: none;
+    border: 1px solid gray;
+    border-radius: 8px;
   }
   &__search-btn{
     font-size: 20px;
@@ -34,6 +40,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    cursor: pointer;
   }
   &__search-btn-left{
     display: none;
@@ -60,7 +67,7 @@
     transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     animation-name: appearMobileMenu-animation;
     animation-duration: 1s;
-    z-index: 51;
+    z-index: 151;
     &--hide{
       animation-name: hideMobileMenu-animation;
       animation-duration: 1s;
@@ -137,6 +144,9 @@
       border-bottom: 1px solid #e8e8e1;
     }
   }
+  &__bottom-logotype-link{
+    display: block;
+  }
   &__bottom-right-part a{
     display: block;
   }
@@ -151,6 +161,8 @@
   &__bottom-srch-wdg-mobile{
     display: flex;
     align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
   }
   &__bottom-srch-wdg-mobile-link{
     width: 30px;
@@ -159,9 +171,25 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  &__bottom-cart-wdg-mobile-link{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      right: 4px;
+      bottom: 4px;
+      z-index: 130;
+      background-color: rgb(255,79,51);
+    }
+  }
   &__bottom-cart-wdg{
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 }
 .sticky{
@@ -188,11 +216,13 @@
     left: -500px;
   }
 }
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .header{
     &__upper{
       display: block;
       justify-content: flex-end;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e8e8e1;
     }
     &__upper-social{
       display: flex;
@@ -200,9 +230,9 @@
     }
     &__upper-social a{
       display: block;
-      width: 20px;
-      height: 20px;
-      margin-left: 25px;
+      width: 14px;
+      height: 14px;
+      margin-left: 15px;
     }
     &__bottom-srch-form-out-wrap{
       height: 70px;

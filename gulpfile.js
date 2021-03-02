@@ -67,7 +67,6 @@ function scripts() {
     .pipe(babel({
       presets: ['env']
     }))
-    .pipe(uglify())
     .pipe(concat('script.min.js'))
     .pipe(gulp.dest(paths.build + 'js/'))
 }
@@ -92,7 +91,7 @@ function scriptsVendors() {
 }
 
 function htmls() {
-  return gulp.src(paths.src + '*.html')
+  return gulp.src(paths.src + '*.{html,ico}')
     .pipe(plumber())
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
     .pipe(gulp.dest(paths.build));

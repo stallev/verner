@@ -1,4 +1,6 @@
 .about{
+  max-height: 600px;
+  overflow: hidden;
   &__inner-wrap{
     display: flex;
     flex-direction: column;
@@ -46,8 +48,9 @@
     margin-bottom: 15px;
   }
 }
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .about{
+    max-width: none;
     &__inner-wrap{
       height: 500px;
     }

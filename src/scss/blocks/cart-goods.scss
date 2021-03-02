@@ -2,7 +2,7 @@
   padding: 20px 20px 10px;
   background-color: #fff;
   transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  z-index: 51;
+  z-index: 151;
   &--main{
     display: none;
     position: fixed;
@@ -33,7 +33,10 @@
     align-items: center;
     height: 70px;
     padding: 45px 0;
-    border-bottom: 1px solid rgb(49, 48, 48);
+    border-bottom: 1px solid #e8e8e1;
+  }
+  &__close-button{
+    cursor: pointer;
   }
   &__list{
     margin-bottom: 25px;
@@ -42,11 +45,11 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    align-items: center;
     font-size: 1.4rem;
     font-family: $content-ff;
     letter-spacing: 0.2rem;
-    border-bottom: 1px solid rgb(49, 48, 48);
+    border-bottom: 1px solid #e8e8e1;
   }
   &__item-link{
     display: flex;
@@ -95,7 +98,7 @@
     display: block;
     box-sizing: border-box;
     padding: 0 3px;
-    border: 1px solid #000;
+    border: 1px solid #e8e8e1;
     width: 20px;
   }
   &__item-counter-minus:hover,
@@ -107,8 +110,10 @@
     display: block;
     text-align: center;
     width: 25px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #e8e8e1;
+    border-bottom: 1px solid #e8e8e1;
   }
   &__item-price{
     text-transform: uppercase;
@@ -120,7 +125,11 @@
   &__order-comment{
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
     font-size: 1.5rem;
+  }
+  &__order-comment textarea{
+    border: 1px solid #e8e8e1;
   }
   &__order-comment-text{
     margin-bottom: 25px;
@@ -128,7 +137,7 @@
   }
   &__summation{
     padding-top: 25px;
-    border-top: 1px solid rgb(49, 48, 48);
+    border-top: 1px solid #e8e8e1;
     font-size: 1.6rem;
   }
   &__summation-data{
@@ -251,7 +260,7 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 30px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #e8e8e1;
   }
   &__shipping-title{
     display: flex;
@@ -276,7 +285,7 @@
     text-align: center;
   }
 }
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .cart-goods{
     &--main{
       width: 400px;

@@ -104,7 +104,7 @@
   &-item__delivery-info{
     margin-bottom: 30px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #e8e8e1;
     font-size: 1.9rem;
     line-height: 2.2rem;
   }
@@ -141,6 +141,7 @@
 }
 .product-modal .product{
   padding-bottom: 50px;
+  z-index: 151;
 }
 .product-modal-quick{
   width: 90%;
@@ -184,7 +185,7 @@
 }
 
 
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .products-section,
   .recently-viewed{
     margin-top: 75px;
@@ -233,7 +234,7 @@
     &-item__delivery-info{
       margin-bottom: 30px;
       padding-bottom: 25px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #e8e8e1;
       font-size: 1.9rem;
       line-height: 2.2rem;
     }

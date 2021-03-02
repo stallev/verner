@@ -5,6 +5,7 @@
   display: none;
   top: 0;
   height: 100%;
+  overflow-y: scroll; 
   background-color: #fff;
   flex-direction: column;
   width: 270px;
@@ -24,7 +25,7 @@
     align-items: center;
     height: 70px;
     padding: 45px 0;
-    border-bottom: 1px solid rgb(49, 48, 48);
+    border-bottom: 1px solid #e8e8e1;
   }
   &__title{
     font-size: 2.5rem;
@@ -111,7 +112,7 @@ li.sidebar__item > input[type="checkbox"]:checked + label::before{
   display: none;
   transition: width 0.3s ease-out;
 }
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .sidebar{
     position: static;
     animation: none;

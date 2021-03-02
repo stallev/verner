@@ -1,3 +1,29 @@
+/* для добавления модальности окну */
+const body = document.querySelector('body');
+function existVerticalScroll() {
+  return document.body.offsetHeight > window.innerHeight
+}
+
+function getBodyScrollTop() {
+   return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+ }
+function blockOther(){
+  let modalWindowTopPosition;
+  console.log('no');
+  body.dataset.scrollY = getBodyScrollTop(); // сохраним значение скролла
+  if(existVerticalScroll()) {
+    body.classList.add('body-lock');
+    body.style.top = `-${body.dataset.scrollY}px`;
+  }
+}
+function unblockOther(){
+  if(existVerticalScroll()) {
+    body.classList.remove('body-lock');
+    window.scrollTo(0,body.dataset.scrollY);    
+  }
+}
+/* для добавления модальности окну - конец*/
+
 
 (function(){
   window.onscroll = function() {stickyHeader()};
@@ -7,10 +33,16 @@
   let mobileMenu = document.querySelector('.header__mobile-menu');
   document.querySelector('.header__menu-toggle-humburger').onclick = openMobileMenu;
   document.querySelector('.header__mobile-menu-close-button').onclick = closeMobileMenu;
+
   function openMobileMenu(){
+    console.log("after");
     mobileMenu.style.display = "flex";
+    blockOther();
+    mobileMenu.style.top = '0px';
   };
+
   function closeMobileMenu(){
+    unblockOther();
     mobileMenu.classList.add('header__mobile-menu--hide');
     setTimeout(function(){
       mobileMenu.classList.remove('header__mobile-menu--hide');
@@ -64,9 +96,12 @@
     closeBasketBtn.onclick = closeBasket;    
   }
   function openBasket(){
+    blockOther();
     basket.style.display = "block";
+    basket.style.top = "0px";
    }
   function closeBasket(){
+    unblockOther();
     basket.classList.add('cart-goods--hide');
     setTimeout(function(){
       console.log('hide');
@@ -137,6 +172,7 @@
     quickviewArray.forEach(element => {
       element.addEventListener('click', function(event){
         event.preventDefault();
+        //blockOther();
         let productQuickview = document.querySelector('.product-modal');
         swal(productQuickview,{
           className: "product-modal-quick",

@@ -27,6 +27,7 @@
     text-transform: uppercase;
   }
   &__text{
+    display: block;
     margin: 7.5px 0;
     text-align: center;
     font-size: 2.49rem;
@@ -37,7 +38,7 @@
     text-transform: uppercase;
   }
 }
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .section-title{
     &__addition{
       font-size: 1.32rem;
@@ -50,5 +51,10 @@
 @media only screen and (min-width: 960px){
   .section-title{
     margin-bottom: 30px;
+    &__addition{
+      &--content-item{
+        text-align: left;
+      }
+    }
   }
 }

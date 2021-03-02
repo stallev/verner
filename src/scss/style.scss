@@ -1,5 +1,5 @@
-//@import "bootstrap_components.scss";
-@import "toast_grid.scss";
+@import "bootstrap_components.scss";
+//@import "toast_grid.scss";
 @import "mixins.scss";
 @import "placeholders.scss";
 @import "variables.scss";
@@ -18,6 +18,7 @@
 @import "blocks/cart-slider.scss";
 @import "blocks/cart-goods.scss";
 @import "blocks/categories.scss";
+@import "blocks/contact-block.scss";
 @import "blocks/discounts.scss";
 @import "blocks/introduction-section.scss";
 @import "blocks/content-item.scss";
@@ -26,9 +27,12 @@
 @import "blocks/menu.scss";
 @import "blocks/magnific-popup.scss";
 @import "blocks/newsletter.scss";
+@import "blocks/page-title.scss";
+@import "blocks/pagination.scss";
 @import "blocks/product-card.scss";
 @import "blocks/products-section.scss";
 @import "blocks/about.scss";
 @import "blocks/nav.scss";
 @import "blocks/page-title.scss";
 @import "blocks/sidebar.scss";
+@import "blocks/text-block.scss";

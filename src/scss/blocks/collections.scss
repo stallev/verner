@@ -12,6 +12,17 @@
     max-height: 300px;
     width: 100%;
     overflow: hidden;
+    &::after{
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      content: '';
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      top: 10px;
+      left: 10px;
+      border: 2px solid #fff;
+    }
   }
   &__item-link{
     position: absolute;
@@ -55,7 +66,7 @@
   }
 }
 
-@media only screen and (min-width: 765px){
+@media only screen and (min-width: 769px){
   .collections{
     &__list{
       justify-content: space-around;
