@@ -1,18 +1,24 @@
 .sidebar{
+  display: none;
+  margin-bottom: 500px;
+  box-sizing: border-box;
+  z-index: 151;
   position: fixed;
   padding-left: 10px;
   left: 0px;
-  display: none;
   top: 0;
-  height: 100%;
-  overflow-y: scroll; 
   background-color: #fff;
   flex-direction: column;
   width: 270px;
+  height: 100vh;
   transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   animation-name: appearMobileMenu-animation;
   animation-duration: 1s;
-  z-index: 51;
+  &__inner{
+    height: auto;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
   &--hide{
     animation-name: hideMobileMenu-animation;
     animation-duration: 1s;
@@ -85,6 +91,7 @@
     }
   }
 }
+
 div.sidebar__group-controls > input[type="checkbox"] + label::before{
   transform: rotate(-45deg);
   right: 5px;
@@ -114,21 +121,26 @@ li.sidebar__item > input[type="checkbox"]:checked + label::before{
 }
 @media only screen and (min-width: 769px){
   .sidebar{
-    position: static;
+    display: block;
+    position: sticky;
+    float: left;
+    top: 150px;
     animation: none;
+    height: auto;
+    padding-right: 5px;
+    min-width: 270px;
+    margin: 0;
+    z-index: 2;
+    &__inner{
     display: flex;
     flex-direction: column;
-    min-width: 200px;
-    padding-right: 5px;
+    max-height: 60vh;
+    }
     &__controls{
       display: none;
     }
     &__group{
       width: 100%;
     }
-  }
-  .fixed-sidebar{
-    position: fixed;
-    top: 160px;
   }
 }

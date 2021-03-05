@@ -1,0 +1,30 @@
+.social{
+  margin-top: 30px;
+  &__list{
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+  &__link{
+    display: flex;
+    margin: 0 10px;
+  }
+  &__icon{
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-right: 5px;
+  }
+  &__text{
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 769px){
+  .social{
+    &__list{
+      margin: 0;
+    }
+  }
+}

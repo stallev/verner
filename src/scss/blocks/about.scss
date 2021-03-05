@@ -11,6 +11,8 @@
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 50%;
+    animation-name: BgImageSizeChange;
+    animation-duration: 4s;
   }
   &__info{
     width: 270px;

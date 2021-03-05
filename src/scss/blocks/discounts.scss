@@ -1,9 +1,11 @@
 .discounts{
   position: relative;
-  min-height: 400px;
+  height: 400px;
   background-image: url("../img/content/slide1.webp");
   background-size: 100%;
   background-position: 50% 45%;
+  animation-name: BgImageSizeChange;
+  animation-duration: 4s;
   &__img-wrap{
     position: absolute;
     z-index: -1;
@@ -40,6 +42,18 @@
   &__action-block{
     display: flex;
     justify-content: flex-end;
+  }
+}
+section.lazy{
+  background-image: none;
+  background-color: #F1F1FA;
+}
+@keyframes BgImageSizeChange {
+  0%{
+    background-size: 200%;
+  }
+  100%{
+    background-size: 100%;
   }
 }
 @media only screen and (min-width: 769px){

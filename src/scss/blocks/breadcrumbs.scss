@@ -5,6 +5,10 @@
     &--shop{
       margin: 0 auto;
     }
+    &--product{
+      text-align: center;
+      margin: 10px auto 0;
+    }
   }
   &__link{
     display: inline-block;
@@ -14,4 +18,13 @@
     line-height: 1.2;
     color: #000;
   }
+}
+@media only screen and (min-width: 769px){
+  .breadcrumbs{
+    &__list{
+      &--product{
+        margin: 0;
+      }
+    }
+  } 
 }

@@ -1,0 +1,198 @@
+.sale-slider__wrap{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.sale-slider{
+  &__main,
+  &__sec{
+    margin-bottom: 90px;
+  }
+  &__sec{
+    display: none;
+  }
+  &__main{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  &__main .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  &__main .slick-dots button{
+    display: block;
+    margin: 0 5px;
+    box-sizing: border-box;
+    font-size: 0;
+    padding: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(189, 172, 172);
+  }
+  &__main .slick-active button{
+    background-color: rebeccapurple;
+  }
+  &__sec{
+    position: relative;
+    width: 100%;  //ширина малого слайдера, от неё зависит высота элементов малого слайдера
+    margin: 0 auto;
+    // padding: 20px 40px;
+  }
+  &__sec .slick-list{
+    margin: 0 auto;
+  }
+  //расстояние между элементами малого слайдера
+  &__sec-item{
+    margin: 0 10px;
+    //height: 25%;
+  }
+  &__sec-item img{
+    //object-fit:fill
+  }
+  //стилизация arrows в навигационном слайдере
+  
+  &__sec:hover .slick-arrow{
+    display: block;
+  }
+  &__sec-prev{
+    left: 0;
+    &::after{
+      top: 58%;
+      left: 34%;
+      transform: rotate(45deg);
+    }
+    &::before{
+      top: 38%;
+      left: 32%;
+      transform: rotate(-45deg);
+    }
+    
+  }
+  &__sec-next{
+    right: -20px;
+    &::after{
+      top: 58%;
+      right: 34%;
+      transform: rotate(-45deg);
+    }
+    &::before{
+      top: 38%;
+      right: 32%;
+      transform: rotate(45deg);
+    }
+  }
+}
+@media only screen and (min-width: 769px){
+  .sale-slider__wrap{
+    width: 50%;
+    background-color: #fff;
+  }
+  .sale-slider{
+    &__main,
+    &__sec{
+      margin-bottom: 90px;
+    }
+    &__sec{
+      display: block;
+    }
+    &__main{
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    &__main .slick-dots{
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    &__main .slick-dots button{
+      display: block;
+      margin: 0 5px;
+      box-sizing: border-box;
+      font-size: 0;
+      padding: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: rgb(189, 172, 172);
+    }
+    &__main .slick-active button{
+      background-color: rebeccapurple;
+    }
+    &__sec{
+      position: relative;
+      width: 100%;  //ширина малого слайдера, от неё зависит высота элементов малого слайдера
+      margin: 0 auto;
+      // padding: 20px 40px;
+    }
+    &__sec .slick-list{
+      margin: 0 auto;
+    }
+    //расстояние между элементами малого слайдера
+    &__sec-item{
+      margin: 0 10px;
+      //height: 25%;
+    }
+    &__sec-item img{
+      //object-fit:fill
+    }
+    //стилизация arrows в навигационном слайдере
+    &__sec .slick-arrow{
+      position: absolute;
+      display: none;
+      width: 32px;
+      height: 32px;
+      top: 50%;
+      transform: translate(-50%, 0);
+      background-color: grey;
+      border: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      z-index: 10;
+      border-color: inherit;
+      cursor: pointer;
+      &:hover{
+        background-color: #fff;
+      }
+      &::after,
+      &::before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: 25%;
+        height: 6%;
+        background-color: #fff;
+      }
+      &:hover::after,
+      &:hover::before{
+        background-color: gray;
+      }
+    }
+    &__sec:hover .slick-arrow{
+      display: block;
+    }
+    &__sec-prev{
+      left: 0;
+      
+    }
+    &__sec-next{
+      right: -30px;
+    }
+  }
+  .product-modal .sale-slider{
+    &__main{
+      width: 50%;
+    }
+    &__sec{
+      width: 55%;
+    }
+  }
+}
+.display-quick{
+  width: 100%;
+  height: 30px;
+  background-color: orange;
+}

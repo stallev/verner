@@ -1,4 +1,5 @@
 .action{
+  position: relative;
   display: block;
   display: inline-block;
   font-size: 1.1rem;
@@ -12,6 +13,7 @@
   text-transform: uppercase;
   letter-spacing: 0.3em;
   padding: 9px 17px;
+  overflow: hidden;
   margin: 0;
   min-width: 90px;
   vertical-align: middle;
@@ -27,32 +29,61 @@
   &--discounts:nth-of-type(1){
     margin-right: 10px;
   }
-  &:hover{
-    animation-name: hover-btn-animation;
-    animation-duration: 2s;
-    background: rgb(88, 87, 87);
-  }
   &--collections{
     display: block;
     background-color: transparent;
     border: 2px solid #fff;
   }
+  &--center-redirect-left{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px 0;
+    margin: 30px 0;
+    width: 100%;
+    & i{}
+  }
 }
-@keyframes hover-btn-animation {
-  0%{
-    background: #111;
+.action::after{
+  position: absolute;
+  content: "";
+  display: none;
+  width: 55%;
+  height: 100%;
+  margin-left: 60px;
+  background: #fff;
+  position: absolute;
+  right: 150%;
+  top: 0;
+  opacity: .2;
+  z-index: 20;
+  transform: skewX(-30deg);
+  transition: all 0.1s;
+  animation-name: slideme;
+  animation-duration: .3s;
+  animation-delay: 0.05s;
+  animation-timing-function: ease-in-out;
+}
+.action.product-item__buy-now{
+  width: 100%;
+}
+.action:hover::after{
+  display: block;
+}
+@keyframes slideme {
+  0% {
+    right: -1px;
   }
-  50%{
-    background: rgb(163, 162, 162);
-  }
-  100%{
-    background: rgb(88, 87, 87);
+  100% {
+    right: 150%;
   }
 }
 @media only screen and (min-width: 769px){
   .action{
-    &--intro{
-      
+    &--center-redirect-left{
+      width: fit-content;
+      padding: 9px 17px 9px 35px;
+      margin: 60px auto;
     }
   }
   .action--discounts:nth-of-type(1){

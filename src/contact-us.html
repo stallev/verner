@@ -25,49 +25,51 @@
       </button>
     </div>
     <div class="cart-goods__content">
-      <form action="index.html" class="cart-goods__form">
+      <form action="checkout.html" class="cart-goods__form">
         <div class="cart-goods__form-inner-wrap">
-          <ul class="cart-goods__list">
-            <li class="cart-goods__item">
-              <a href="product-page.html" class="cart-goods__item-link">
-                <img src="../img/content/products-thumbs/products-thumb1.jpg" alt="products-thumb" class="cart-goods__item-img">
-              </a>
-              <div class="cart-goods__item-info">
-                <div class="cart-goods__item-desription">
-                  <h5 class="cart-goods__item-title">
-                    Chunky Sole Boots
-                  </h5>
-                  <span class="cart-goods__item-size">
-                    36
-                  </span>
-                </div>
-                <div class="cart-goods__item-count-block">
-                  <div class="cart-goods__item-counter">
-                    <span class="cart-goods__item-counter-minus">
-                      -
-                    </span>
-                    <input type="text" value="2" name="item1-count" class="cart-goods__item-count-value">
-                    <span class="cart-goods__item-counter-plus">
-                      +
+          <div class="cart-goods__user-select">
+            <ul class="cart-goods__list">
+              <li class="cart-goods__item">
+                <a href="product-page.html" class="cart-goods__item-link">
+                  <img src="../img/content/products-thumbs/products-thumb1.jpg" alt="products-thumb" class="cart-goods__item-img">
+                </a>
+                <div class="cart-goods__item-info">
+                  <div class="cart-goods__item-desription">
+                    <h5 class="cart-goods__item-title">
+                      Chunky Sole Boots
+                    </h5>
+                    <span class="cart-goods__item-size">
+                      36
                     </span>
                   </div>
-                  <div class="cart-goods__item-price">
-                    <span class="cart-goods__item-price-value">
-                      1.500
-                    </span>
-                    <span class="cart-goods__item-price-currency">
-                      nis
-                    </span>
+                  <div class="cart-goods__item-count-block">
+                    <div class="cart-goods__item-counter">
+                      <span class="cart-goods__item-counter-minus">
+                        -
+                      </span>
+                      <input type="text" value="2" name="item1-count" class="cart-goods__item-count-value">
+                      <span class="cart-goods__item-counter-plus">
+                        +
+                      </span>
+                    </div>
+                    <div class="cart-goods__item-price">
+                      <span class="cart-goods__item-price-value">
+                        1.500
+                      </span>
+                      <span class="cart-goods__item-price-currency">
+                        nis
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>       
-          </ul>
-          <div class="cart-goods__order-comment">
-            <p class="cart-goods__order-comment-text">
-              ORDER NOTE
-            </p>
-            <textarea name="cart-goods__order-textarea" id="cart-goods__order-textarea" cols="30" rows="5"></textarea>
+              </li>       
+            </ul>
+            <div class="cart-goods__order-comment">
+              <p class="cart-goods__order-comment-text">
+                ORDER NOTE
+              </p>
+              <textarea name="cart-goods__order-textarea" id="cart-goods__order-textarea" cols="30" rows="5"></textarea>
+            </div>
           </div>
           <div class="cart-goods__summation">
             <div class="cart-goods__summation-data">
@@ -86,7 +88,7 @@
             <p class="cart-goods__summation-description">
               Shipping, taxes, and discount codes calculated at checkout.
             </p>
-            <button type="submit" class="cart-goods__summation-submit">
+            <button type="submit" class="action cart-goods__summation-submit">
               checkout
             </button>
           </div>
@@ -104,12 +106,12 @@
     <div class="header__mobile-menu-content">
       <ul class="header__mobile-menu-list">
         <li class="header__nav-menu-hidden-item">
-          <a href="#" class="header__nav-menu-hidden-link">
+          <a href="index.html" class="header__nav-menu-hidden-link">
             home
           </a>
         </li>
         <li class="header__nav-menu-hidden-item">
-          <a href="#" class="header__nav-menu-hidden-link">
+          <a href="shop.html" class="header__nav-menu-hidden-link">
             shop
           </a>
         </li>
@@ -119,12 +121,12 @@
           </a>
         </li>
         <li class="header__nav-menu-hidden-item">
-          <a href="#" class="header__nav-menu-hidden-link">
+          <a href="sale.html" class="header__nav-menu-hidden-link">
                 sale
           </a>
         </li>
         <li class="header__nav-menu-hidden-item">
-          <a href="checkout.html" class="header__nav-menu-hidden-link">
+          <a href="#" class="header__nav-menu-hidden-link">
             collabs
           </a>
         </li>
@@ -132,12 +134,7 @@
           <a href="contact-us.html" class="header__nav-menu-hidden-link">
             contact us
           </a>
-        </li>        
-        <li class="header__nav-menu-hidden-item header__nav-menu-hidden-item--logging">
-          <a href="#" class="header__nav-menu-hidden-link">
-            Log in
-          </a>
-        </li>        
+        </li>      
       </ul>
       <ul class="header__mobile-menu-social">
         <li class="header__mobile-menu-social-item">
@@ -209,25 +206,25 @@
         </div>
         <div class="nav nav--main">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link link-hover-underline">
+            <li class="nav__item"><a href="#" class="nav__link link-hover-underline link-hover-underline--nav">
               home
             </a></li>
-            <li class="nav__item"><a href="shop.html" class="nav__link link-hover-underline">
+            <li class="nav__item"><a href="shop.html" class="nav__link link-hover-underline link-hover-underline--nav">
               shop
             </a></li>
             <li class="nav__item">
-              <a href="#" class="nav__link link-hover-underline">
+              <a href="#" class="nav__link link-hover-underline link-hover-underline--nav">
                 men
               </a></li>
             <li class="nav__item">
-              <a href="sale.html" class="nav__link link-hover-underline">
+              <a href="sale.html" class="nav__link link-hover-underline link-hover-underline--nav">
                 sale
               </a>
             </li>
-            <li class="nav__item"><a href="checkout.html" class="nav__link link-hover-underline">
+            <li class="nav__item"><a href="checkout.html" class="nav__link link-hover-underline link-hover-underline--nav">
               collabs
             </a></li>
-            <li class="nav__item"><a href="contact-us.html" class="nav__link link-hover-underline">
+            <li class="nav__item"><a href="contact-us.html" class="nav__link link-hover-underline link-hover-underline--nav">
               contact us
             </a></li>
           </ul>
@@ -277,17 +274,24 @@
         <div class="contact-block__form-out-wrap">
           <form action="index.html" class="contact-block__form">
             <div class="contact-block__person-info">
-              <input type="text" name="contact-person-name" class="contact-block__person-name">
-              <input type="email" name="contact-person-email" class="contact-block__person-email">
+              <div class="contact-block__person-info-item contact-block__person-info-item--name">
+                <label for="contact-person-name-f">name</label>
+                <input id="contact-person-name-f" type="text" name="contact-person-name" class="contact-block__person-name">
+              </div>
+              <div class="contact-block__person-info-item">
+                <label for="contact-person-email-f">email</label>
+                <input id="contact-person-email-f" type="email" name="contact-person-email" class="contact-block__person-email">
+              </div>
             </div>
-            <div class="contact-block__message-wrap">
-              <textarea name="contact-person-email" cols="30" rows="10"></textarea>
+            <div class="contact-block__person-info-item">
+              <label for="contact-person-message-f">message</label>
+              <textarea id="contact-person-message-f" name="contact-person-message" cols="30" rows="10"></textarea>
             </div>
             <button type="submit" class="action">send</button>
           </form>
         </div> 
         <div class="contact-block__location">
-          <iframe class="contact-block__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2413111.843605879!2d28.27751257738068!3d53.88529189075005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1614628543070!5m2!1sru!2sby"  height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe class="contact-block__map"src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d46327.685976845445!2d35.132754806654354!3d31.802243001249316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1614925171868!5m2!1sru!2sby" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </section>
     </div>
@@ -335,31 +339,50 @@
   <div class="container container--hide">
     <div class="product-modal">
       <div class="product">
-        <div class="product__product-photos">
-          <div class="product-thumb-slider">
-            <div>
-              <img src="../img/content/product/item1/slide1.webp" alt="" class="product-thumb-slider-image">
+        <div class="sale-slider__wrap">
+          <div class="sale-slider">
+            <div class="sale-slider__main">
+              <div class="sale-slider__main-item">
+                <img src="../img/content/product/item1/slide1-big.webp" alt="" class="sale-slider__main-item-img">
+              </div>
+              <div class="sale-slider__main-item">
+                <img src="../img/content/product/item1/slide2-big.webp" alt="" class="sale-slider__main-item-img">
+              </div>
+              <div class="sale-slider__main-item">
+                <img src="../img/content/product/item1/slide3-big.webp" alt="" class="sale-slider__main-item-img">
+              </div>
+              <div class="sale-slider__main-item">
+                <img src="../img/content/product/item1/slide2-big.webp" alt="" class="sale-slider__main-item-img">
+              </div>
             </div>
-            <div>
-              <img src="../img/content/product/item1/slide2.webp" alt="" class="product-thumb-slider-image">
+            <div class="sale-slider__sec">
+              <div class="sale-slider__sec-item">
+                <img src="../img/content/product/item1/slide1.webp" alt="" class="sale-slider__sec-item-img">
+              </div>
+              <div class="sale-slider__sec-item">
+                <img src="../img/content/product/item1/slide2.webp" alt="" class="sale-slider__sec-item-img">
+              </div>
+              <div class="sale-slider__sec-item">
+                <img src="../img/content/product/item1/slide3.webp" alt="" class="sale-slider__sec-item-img">
+              </div>
+              <div class="sale-slider__sec-item">
+                <img src="../img/content/product/item1/slide2.webp" alt="" class="sale-slider__sec-item-img">
+              </div>
             </div>
-            <div>
-              <img src="../img/content/product/item1/slide3.webp" alt="" class="product-thumb-slider-image">
-            </div>
-        </div>
-        <div class="product-main-slider">
-            <div>
-              <img src="../img/content/product/item1/slide1-big.webp" alt="" class="product-main-slider-image">
-            </div>
-            <div>
-              <img src="../img/content/product/item1/slide2-big.webp" alt="" class="product-main-slider-image">
-            </div>
-            <div>
-              <img src="../img/content/product/item1/slide3-big.webp" alt="" class="product-main-slider-image">
-            </div>
-        </div>
+          </div>
         </div>
         <div class="product__product-info">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list breadcrumbs__list--product">
+              <li class="breadcrumds__item">           
+                <a href="index.html" class="breadcrumbs__link">Home</a>
+                <span>&nbsp;&frasl;</span>
+              </li>
+              <li class="breadcrumds__item">
+                <a class="breadcrumbs__link" href="contact-us.html">NEW ARRIVALS</a>
+              </li>
+            </ul>
+          </div>
           <div class="product__product-specs">
             <span class="product-item__vendor product-item-vendor--quickview">
               jw anderson
@@ -376,14 +399,14 @@
               </span>
             </div>
             <p class="product-item__delivery-info product-item__delivery-info--quickview">
-              Tax included. Shipping calculated at checkout.
+              Tax included. <a href="shipping-policy.html" class="link-hover-underline"> Shipping </a> calculated at checkout.
             </p>
           </div>
           <div class="product-item__buy-btns product-item__buy-btns--quickview">
             <button class="product-item__add-to-cart">
               add to cart
             </button>
-            <button class="product-item__buy-now">
+            <button class="action product-item__buy-now">
               buy it now
             </button>
           </div>
@@ -397,6 +420,28 @@
             <p class="product-item__additional-info-itm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio quo excepturi ducimus. 
             </p>
+          </div>
+          <div class="social social--product">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <span class="social__icon"><i class="fab fa-facebook-f"></i></span>
+                  <span class="social__text">Share</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <span class="social__icon"><i class="fab fa-twitter"></i></span>
+                  <span class="social__text">Twit</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <span class="social__icon"><i class="fab fa-pinterest"></i></i></span>
+                  <span class="social__text">Pin</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

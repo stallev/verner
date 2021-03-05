@@ -1,4 +1,5 @@
 /* для добавления модальности окну */
+
 const body = document.querySelector('body');
 function existVerticalScroll() {
   return document.body.offsetHeight > window.innerHeight
@@ -8,7 +9,6 @@ function getBodyScrollTop() {
    return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
  }
 function blockOther(){
-  let modalWindowTopPosition;
   console.log('no');
   body.dataset.scrollY = getBodyScrollTop(); // сохраним значение скролла
   if(existVerticalScroll()) {
@@ -25,17 +25,16 @@ function unblockOther(){
 /* для добавления модальности окну - конец*/
 
 
+/* липкий header*/
 (function(){
   window.onscroll = function() {stickyHeader()};
   let header = document.querySelector(".header__bottom");
   let sticky = header.offsetTop;
-  let sidebar = document.querySelector(".sidebar");
   let mobileMenu = document.querySelector('.header__mobile-menu');
   document.querySelector('.header__menu-toggle-humburger').onclick = openMobileMenu;
   document.querySelector('.header__mobile-menu-close-button').onclick = closeMobileMenu;
 
   function openMobileMenu(){
-    console.log("after");
     mobileMenu.style.display = "flex";
     blockOther();
     mobileMenu.style.top = '0px';
@@ -51,12 +50,14 @@ function unblockOther(){
   };
   function stickyHeader() {
     if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
+      header.classList.add("sticky-header");
     } else {
-      header.classList.remove("sticky");
+      header.classList.remove("sticky-header");
     }
   }
 })();
+
+
 //display sidebar
 (function(){
   let displaySidebarFiltersBtn = document.querySelector('.products-section__filters');
@@ -67,11 +68,12 @@ function unblockOther(){
     displaySidebarFiltersBtn.onclick = displaySidebar;    
   }
   if(closeSidebarBtn){
-    console.log('yes');
     closeSidebarBtn.onclick = hideSidebar;    
   }
   function displaySidebar(){
+    document.querySelector('body').classList.add('body-lock');
     sidebar.style.display = "flex";
+    sidebar.style.top = "0px";
    }
   function hideSidebar(){
     sidebar.classList.add('sidebar--hide');
@@ -80,6 +82,7 @@ function unblockOther(){
       sidebar.classList.remove('sidebar--hide');
     },1100)
     sidebar.style.display = "none";
+    document.querySelector('body').classList.remove('body-lock');
   };
 })();
 
@@ -182,6 +185,44 @@ function unblockOther(){
   }
 })();
 
+//open-close footer menu
+(function(){
+  let footerMenuTitle = document.querySelector('.footer__menu-title');
+  function toggleFooterTitleClass(){
+    footerMenuTitle.classList.toggle('footer__menu-title-open');
+  }
+  if((footerMenuTitle)&&(window.innerWidth<769)){
+    footerMenuTitle.onclick = toggleFooterTitleClass;
+  }
+})();
+
+
+//added zoom effect
+
+$('#zoom1').elevateZoom();
+$('#zoom2').elevateZoom();
+$('#zoom3').elevateZoom();
+
+// $(document).ready(function(){
+//   $('#zoom1').zoom({url: '../img/content/product/item1/zoom_1800x1800.jpg'});
+// });
+// $(document).ready(function(){
+//   $('#zoom2').zoom({url: '../img/content/product/item1/zoom_1800x1800.jpg'});
+// });
+// $(document).ready(function(){
+//   $('#zoom3').zoom({url: '../img/content/product/item1/zoom_1800x1800.jpg'});
+// });
+
+// (function(){
+//   let zoomImages = document.querySelectorAll('.zoom-effect');
+//   if(zoomImages){
+//     zoomImages.forEach(element => {
+//       element.elevateZoom();
+//     });
+//   }
+// })();
+
+
 //slider on product-page
 (function(){
   $('.product-main-slider').slick({
@@ -215,6 +256,40 @@ function unblockOther(){
     asNavFor: '.product-main-slider',
     focusOnSelect: true,
     centerMode: false,
-    vertical: true,
+    //vertical: true,
   });
-})()
+})();
+
+(function(){
+  $(document).ready(function(){
+    $('.sale-slider__main').slick({
+      arrows: true,
+      dots: true,
+      adaptiveHeight: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      speed: 500,
+      easing: 'ease',
+      infinite: true,
+      asNavFor: '.sale-slider__sec',
+      initialSlide: 0,
+      autoplay: false,
+      autoplaySpeed: 500,
+      pauseOnFocus: true,
+      pauseOnHover: true,
+    });
+    $('.sale-slider__sec').slick({
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,               
+      dots: false,
+      infinite: true,
+      asNavFor: '.sale-slider__main',
+      focusOnSelect: true,
+      //centerMode: true,
+      prevArrow:'<button class="sale-slider__sec-prev"></button>',
+      nextArrow:'<button class="sale-slider__sec-next"></button>',
+    });
+  });  
+})();

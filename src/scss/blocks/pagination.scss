@@ -1,1 +1,41 @@
-.pagination{}
+.pagination{
+  padding: 65px 0 0;
+  &__list{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  &__item{
+    display: block;
+    margin-right: 15px;
+    &--current{
+      opacity: .5;
+    }
+  }
+  &__item-link{
+    display: block;
+    padding: 3px 7px;
+    font-size: 1.9rem;
+  }
+  &__control{
+    display: block;
+    width: fit-content;
+    padding: 4px 13px;
+    text-align: center;
+    background-color: rgb(17,17,17);
+    color: #fff;
+    & i{
+      font-size: 2.9rem;
+      font-weight: 100;
+    }
+    &--prev{
+      margin-right: 25px;
+      display: none;
+    }
+    &--next{
+      margin-left: 10px;
+      display: block;
+    }
+  }
+}

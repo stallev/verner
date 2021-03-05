@@ -26,14 +26,21 @@
 .link-hover-underline{
   position: relative;
   display: inline-block;
+  border-bottom: 1px solid #e8e8e1;
   cursor: pointer;
+  &--nav{
+    border-bottom: none;
+    &::after{
+      height: 2px;
+    }
+  }
   &::after{
     display: block;
     position: absolute;
     bottom: -1px;
     left: 0; 
     width: 0;
-    height: 1px; 
+    height: 2px; 
     background-color: #000; 
     content: "";
     transition: width 0.3s ease-out;

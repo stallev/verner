@@ -7,34 +7,30 @@
 }
 
   @font-face {
-  font-family: Futura;
+  font-family: Lato;
+  font-weight: 100;
+  font-style: normal;
+  src: url('../fonts/Lato-Thin.woff2') format('woff2'),
+  url('../fonts/Lato-Thin.woff') format('woff');
+}
+  @font-face {
+  font-family: Lato;
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/Lato-Light.woff2') format('woff2'),
+  url('../fonts/Lato-Light.woff') format('woff');
+}
+  @font-face {
+  font-family: Lato;
   font-weight: 400;
   font-style: normal;
-  src: url('../fonts/FuturaRegular.woff2') format('woff2'),
-  url('../fonts/FuturaRegular.woff') format('woff');
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+  url('../fonts/Lato-Regular.woff') format('woff');
 }
-
-
   @font-face {
-  font-family: Futura;
+  font-family: Lato;
   font-weight: 600;
   font-style: normal;
-  src: url('../fonts/FuturaSemiBold.woff2') format('woff2'),
-  url('../fonts/FuturaSemiBold.woff') format('woff');
-}
-
-  @font-face {
-  font-family: Futura;
-  font-weight: 400;
-  font-style: oblique;
-  src: url('../fonts/FuturaOblique.woff2') format('woff2'),
-  url('../fonts/FuturaOblique.woff') format('woff');
-}
-
-  @font-face {
-  font-family: Futura;
-  font-weight: 600;
-  font-style: oblique;
-  src: url('../fonts/FuturaSemiBoldOblique.woff2') format('woff2'),
-  url('../fonts/FuturaSemiBoldOblique.woff') format('woff');
+  src: url('../fonts/Lato-Semibold.woff2') format('woff2'),
+  url('../fonts/Lato-Semibold.woff') format('woff');
 }

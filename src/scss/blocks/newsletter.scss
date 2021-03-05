@@ -36,12 +36,41 @@
   }
   &__form-submit{
     display: block;
-    width: 52px;
-    padding: 9px 17px;
+    width: fit-content;
+    padding: 9px 23px;
     font-size: 1.2rem;
     color: #fff;
     background: #111;
     text-align: center;
     line-height: 30px;
+  }
+  &__form-submit-text{
+    display: none;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+}
+@media only screen and (min-width: 769px){
+  .newsletter{
+    &__title{
+      font-size: 2.1rem;
+      margin-bottom: 12px;
+    }
+    &__descr{
+      margin-bottom: 12px;
+      font-size: 1.8rem;
+    }
+    &__form-input{
+      min-width: 280px;
+    }
+    &__form-submit-text{
+      display: block;
+    }
+    &__form-submit i{
+      display: none;
+    }
   }
 }

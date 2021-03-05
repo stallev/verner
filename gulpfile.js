@@ -83,9 +83,8 @@ function copyWebp() {
 }
 
 function scriptsVendors() {
-  return gulp.src([
-      
-    ])
+  return gulp.src(paths.src + 'js/vendor/*.js')
+    .pipe(plumber())
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest(paths.build + 'js/'))
 }
@@ -112,7 +111,7 @@ function clean() {
 
 function watch() {
   gulp.watch(paths.src + 'scss/**/*.scss', styles);
-  gulp.watch(paths.src + 'js/*.js', scripts);
+  gulp.watch(paths.src + 'js/**/*.js', scripts);
   gulp.watch(paths.src + '*.html', htmls);
 }
 
@@ -137,11 +136,11 @@ exports.copyWebp = copyWebp;
 
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, svgSprite, scripts, htmls, copyFonts, copyWebp, images)
+  gulp.parallel(styles, svgSprite, scripts, scriptsVendors, htmls, copyFonts, copyWebp, images)
 ));
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, svgSprite, scripts, htmls, copyFonts, copyWebp, images),
+  gulp.parallel(styles, svgSprite, scripts, scriptsVendors, htmls, copyFonts, copyWebp, images),
   gulp.parallel(watch, serve)
 ));

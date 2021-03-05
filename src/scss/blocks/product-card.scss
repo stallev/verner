@@ -48,7 +48,7 @@
   &__title{
     margin-bottom: 5px;
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
   }
   &__vendor{
@@ -92,9 +92,7 @@
     transition: opacity 0.25s ease, transform 0.25s ease-out, background 0.4s ease;
   }
 }
-.product-card:hover .product-card__quickview{
-  display: block;
-}
+
 .product-card:hover .product-card__picture-primary{
   display: none;
 }
@@ -115,6 +113,23 @@
     margin-bottom: 30px;
     &__title{
       margin-bottom: 10px;
+      font-size: 1.6rem;
+    }
+    &__vendor{
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+    &__price{
+      font-size: 1.5rem;
+    }
+  }
+  .product-card:hover .product-card__quickview{
+    display: block;
+  }
+}
+@media only screen and (min-width: 1140px){
+  .product-card{
+    &__title{
       font-size: 2.1rem;
     }
     &__vendor{
@@ -124,6 +139,5 @@
     &__price{
       font-size: 1.7rem;
     }
-
   }
 }

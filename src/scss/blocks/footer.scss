@@ -1,28 +1,67 @@
 .footer{
-  padding: 60px 0;
+  padding-bottom: 20px;
   &__menu{
-    margin-bottom: 80px;
-    width: 70%;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
   }
   &__menu-title{
-    margin-bottom: 20px;
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 400;
+    text-align: center;
+    color: rgb(92,92,92);
+    cursor: pointer;  
+    &-open-btn,
+    &-close-btn{
+      position: absolute;
+      display: block;
+      right: 25px;
+      top: 10px;
+      width: 15px;
+      height: 15px;
+      font-size: 2.6rem;
+      text-align: center;
+      color: rgb(92,92,92);
+      background-color: #fff;
+    }
+    &-open-btn{
+      display: block;
+    } 
+    &-close-btn{
+      display: none;
+    } 
   }
   &__menu-list{
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+    animation-name: appearFooterMenu-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    //transition: all 0.5s ease-in-out;
+  }
+  &__menu-item{
+    width: 100%;
   }
   &__menu-link{
     display: block;
-    width: fit-content;
+    width: 100%;
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
+    text-align: center;
+    color: rgb(92,92,92);
   }
   &__copyright{
+    padding-top: 20px;
     text-align: center;
   }
   &__copyright-text{
@@ -31,5 +70,52 @@
   }
   &__author-text{
     font-size: 1.3rem;
+  }
+}
+.footer__menu-title-open span.footer__menu-title-open-btn{
+  display: none;
+}
+.footer__menu-title-open span.footer__menu-title-close-btn{
+  display: block;
+}
+.footer__menu-title-open + ul.footer__menu-list{
+  display: flex;
+}
+@keyframes appearFooterMenu-animation {
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 140px;
+  }
+}
+@media only screen and (min-width: 769px){
+  .footer{
+    border-top: 1px solid #e8e8e8;
+    padding: 60px 0;
+    &__menu{
+      margin-bottom: 80px;
+      width: 70%;
+      border: none;
+    }
+    &__menu-title{
+      text-align: left;
+    }
+    &__menu-title span{
+      display: none;
+    }
+    &__menu-list{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+    }
+    &__menu-link{
+      display: block;
+      width: fit-content;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
   }
 }

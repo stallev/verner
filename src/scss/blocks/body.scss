@@ -4,7 +4,7 @@ body{
   font-family: $content-ff;
 }
 .body-lock {
-  overflow-y: scroll;
+  overflow: hidden;
   position:fixed;
   width: 100%;
   &::after{
@@ -20,6 +20,7 @@ body{
     opacity: .2;
   }
 }
+
 ul{
   padding: 0;
 }
