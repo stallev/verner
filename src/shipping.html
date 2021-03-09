@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Shipping</title>
+</head>
+<body>
+  <header class="checkout__mobile-header">
+    <div class="container--checkout-mobile-header">
+      <a href="index.html" class="checkout__title-wrap">
+        <h2 class="checkout__title">
+          VERNER TEL AVIV
+        </h2>
+      </a>
+    </div>
+  </header>
+  <button class="checkout__toggle-block">
+    <div class="container container--checkout-toggle container--checkout-toggle-close">
+      <div class="checkout__toggle-content">
+        <div class="checkout__toggle-text-wrap">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="checkout__toggle-text checkout__toggle-text--open">Show order summury</span>
+          <span class="checkout__toggle-text checkout__toggle-text--hide">Hide order summury</span>
+        </div>
+        <span class="checkout__toggle-value">2.000.00 nis</span>
+      </div>
+    </div>
+  </button>
+  <main class="main main--checkout">
+    <aside class="cart-goods__outer-wrap">
+      <div class="container--checkout-selected-goods">
+        <div class="cart-goods cart-goods--checkout">
+          <div class="cart-goods__content">
+            <div class="cart-goods__form-inner-wrap">
+              <ul class="cart-goods__list">
+                <li class="cart-goods__item">
+                  <a href="cart.html" class="cart-goods__item-link">
+                    <span class="cart-goods__item-count">1</span>
+                    <img src="../img/content/products-thumbs/products-thumb1.jpg" alt="products-thumb" class="cart-goods__item-img">
+                  </a>
+                  <div class="cart-goods__item-info">
+                    <div class="cart-goods__item-desription">
+                      <h5 class="cart-goods__item-title">
+                        Chunky Sole Boots
+                      </h5>
+                      <span class="cart-goods__item-size">
+                        36
+                      </span>
+                    </div>
+                    <div class="cart-goods__item-count-block">
+                      <div class="cart-goods__item-price">
+                        <span class="cart-goods__item-price-value">
+                          1.500
+                        </span>
+                        <span class="cart-goods__item-price-currency">
+                          nis
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>       
+              </ul>
+              <div class="cart-goods__promocode-form-out-wrap">
+                <form action="#" class="cart-goods__promocode-form">
+                  <div class="cart-goods__promocode-form-inner-wrap">
+                    <input type="text"  name="promocode-value" class="cart-goods__promocode-value" placeholder="Gift card or discount code">
+                    <button class="cart-goods__promocode-btn">Apply</button>
+                  </div>
+                </form>
+              </div>
+              <div class="cart-goods__summation">
+                <div class="cart-goods__summation-data">
+                  <h5 class="cart-goods__summation-title">
+                    subtotal
+                  </h5>
+                  <div class="cart-goods__summation-value">
+                    <span class="cart-goods__summation-value">
+                      1.500
+                    </span>
+                    <span class="cart-goods__summation-currency">
+                      nis
+                    </span>
+                  </div>
+                </div>
+                <div class="cart-goods__summation-shipping">
+                  <div class="cart-goods__shipping-title">
+                    <div class="cart-goods__shipping-text">
+                      shipping
+                    </div>
+                    <a href="#" class="cart-goods__shipping-about-link">
+                      <i class="fas fa-question"></i>
+                    </a>
+                  </div>
+                  <span class="cart-goods__shipping-value">
+                    Calculated at next step
+                  </span>  
+                </div>
+                <div class="cart-goods__summation-total">
+                  <span class="cart-goods__total-title">
+                    Total
+                  </span>
+                  <span class="cart-goods__total-value">
+                    2.000.00 nis
+                  </span>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="checkout__delivery-content">
+      <div class="container--checkout-delivery-info">
+        <section class="delivery__info">
+          <div class="store-title store-title--desctop-header">
+            <div class="store-title__wrap">
+              <a href="index.html" class="checkout__title-wrap">
+                <h2 class="checkout__title">
+                  VERNER TEL AVIV
+                </h2>
+              </a>
+            </div>
+          </div>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list breadcrumbs__list--checkout">
+              <li class="breadcrumds__item">           
+                <a href="index.html" class="breadcrumbs__link breadcrumbs__link--checkout">Cart</a>
+                <span>></span>
+              </li>
+              <li class="breadcrumds__item">           
+                <a href="checkout.html" class="breadcrumbs__link breadcrumbs__link--checkout">Information</a>
+                <span>></span>
+              </li>
+              <li class="breadcrumds__item">           
+                <a href="shipping.html" class="breadcrumbs__link breadcrumbs__link--checkout breadcrumbs__link--checkout-current">Shipping</a>
+                <span>></span>
+              </li>
+              <li class="breadcrumds__item">           
+                <a href="payment.html" class="breadcrumbs__link breadcrumbs__link--checkout">Payment</a>
+              </li>
+            </ul>
+          </div>
+          <div class="checkout__contact-form-out-wrap">
+            <form action="payment.html" class="checkout__form checkout__form--shipping">
+              <div class="checkout__form-item checkout__form-item--delivery-summation">
+                <p class="checkout__form-item-summation-outer checkout__form-item-summation-outer--first">
+                  <span class="checkout__form-item-summation-item-name" >
+                    Contact
+                  </span>
+                  <span class="checkout__form-item-summation-item-value">
+                    mail@company.il
+                  </span>
+                  <a href="checkout.html" class="checkout__form-item-summation-item-change">Change</a>
+                </p>
+                <p class="checkout__form-item-summation-outer">
+                  <span class="checkout__form-item-summation-item-name" >
+                    Ship to
+                  </span>
+                  <span class="checkout__form-item-summation-item-value">
+                    Lorem ipsum dolor sit amet.
+                  </span>
+                  <a href="checkout.html" class="checkout__form-item-summation-item-change">Change</a>
+                </p>
+              </div>
+              <div class="checkout__form-item checkout__form-item--shipping-method">
+                <h3 class="checkout__form-item-title">
+                  Shipping method
+                </h3>
+                <div class="checkout__form-item-input-block-wrap">
+                  <div class="checkout__form-item-input-radio-block checkout__form-item-input-block--deliv-meth">
+                    <p class="checkout__form-item-input-radio-inner checkout__form-item-input-radio-inner--shipping">
+                      <input type="radio" value="deliv-by-ship" id="deliv-by-ship" name="delivery-method" class="checkout__form-item-input-radio">
+                      <i class="fas fa-shipping-fast"></i>
+                      <span class="checkout__form-item-input-radio-value">International shipping</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__form-sumit-block">
+                <button class="checkout__form-submit-btn">Continue to payment</button>
+              </div>
+              <a href="checkout.html" class="checkout__form-link-back"><span>< &nbsp;</span>Return to information</a>
+            </form>
+          </div>
+        </section>
+      </div>
+      <footer class="checkout__footer">
+        <div class="container--checkout-footer">
+          <nav class="checkout__footer-nav">
+            <a href="refund.html" class="checkout__footer-nav-link">Refund policy</a>
+            <a href="shipping-policy.html" class="checkout__footer-nav-link">Shipping policy</a>
+            <a href="privacy-policy.html" class="checkout__footer-nav-link">Privacy policy</a>
+            <a href="terms-of-service.html" class="checkout__footer-nav-link">Terms of service</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/vendors.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Checkout</title>
+  <title>Payment</title>
 </head>
 <body>
   <header class="checkout__mobile-header">
@@ -132,7 +132,7 @@
                 <span>></span>
               </li>
               <li class="breadcrumds__item">           
-                <a href="checkout.html" class="breadcrumbs__link breadcrumbs__link--checkout breadcrumbs__link--checkout-current">Information</a>
+                <a href="checkout.html" class="breadcrumbs__link breadcrumbs__link--checkout">Information</a>
                 <span>></span>
               </li>
               <li class="breadcrumds__item">           
@@ -140,48 +140,96 @@
                 <span>></span>
               </li>
               <li class="breadcrumds__item">           
-                <a href="payment.html" class="breadcrumbs__link breadcrumbs__link--checkout">Payment</a>
+                <a href="payment.html" class="breadcrumbs__link breadcrumbs__link--checkout breadcrumbs__link--checkout-current">Payment</a>
               </li>
             </ul>
           </div>
           <div class="checkout__contact-form-out-wrap">
-            <form action="shipping.html" class="checkout__form checkout__form--delivery">
-              <div class="checkout__form-item checkout__form-item--contact-info">
+            <form action="index.html" class="checkout__form checkout__form--payment">
+              <div class="checkout__form-item checkout__form-item--delivery-payment-summation">
+                <p class="checkout__form-item-summation-outer checkout__form-item-summation-outer--first">
+                  <span class="checkout__form-item-summation-item-name" >
+                    Contact
+                  </span>
+                  <span class="checkout__form-item-summation-item-value">
+                    mail@company.il
+                  </span>
+                  <a href="checkout.html" class="checkout__form-item-summation-item-change">Change</a>
+                </p>
+                <p class="checkout__form-item-summation-outer checkout__form-item-summation-outer--first">
+                  <span class="checkout__form-item-summation-item-name" >
+                    Ship to
+                  </span>
+                  <span class="checkout__form-item-summation-item-value">
+                    Lorem ipsum dolor sit amet.
+                  </span>
+                  <a href="checkout.html" class="checkout__form-item-summation-item-change">Change</a>
+                </p>
+                <p class="checkout__form-item-summation-outer">
+                  <span class="checkout__form-item-summation-item-name" >
+                    Method
+                  </span>
+                  <span class="checkout__form-item-summation-item-value checkout__form-item-summation-item-value--no-grow">
+                    International Shipping
+                  </span>
+                  <span class="checkout__form-item-summation-item-change-ship-price">
+                    100.00 NIS
+                  </span>
+                </p>
+              </div>
+              <div class="checkout__form-item">
                 <h3 class="checkout__form-item-title">
-                  Contact information
+                  Gift card or discount code
                 </h3>
-                <div class="checkout__form-item-input-block">
-                  <input type="email" placeholder="Email" class="checkout__form-item-input-text" name="customer-email">
-                </div>
-                <div class="checkout__form-item-input-block">
-                  <input type="checkbox" name="subscribe-checkbox" id="subscribe-checkbox" class="checkout__form-item-input-checkbox">
-                  <label class="checkout__form-item-label-text-checkbox" for="subscribe-checkbox">Keep me up to date on news and exclusive offers</label>
+                <div class="checkout__promocode-form-out-wrap">
+                  <div class="checkout__promocode-form-inner-wrap">
+                    <input type="text"  name="checkout-promocode-value" class="checkout__promocode-value" placeholder="Gift card or discount code">
+                    <button class="checkout__promocode-btn">Apply</button>
+                  </div>
                 </div>
               </div>
-              <div class="checkout__form-item checkout__form-item--delivery-method">
-                <h3 class="checkout__form-item-title">
-                  Delivery method
+              <div class="checkout__form-item checkout__form-item--cards">
+                <h3 class="checkout__form-item-title checkout__form-item-title--no-margin">
+                  Payment
                 </h3>
-                <div class="checkout__form-item-input-block-wrap">
-                  <div class="checkout__form-item-input-radio-block checkout__form-item-input-block--deliv-meth">
-                    <p class="checkout__form-item-input-radio-inner checkout__form-item-input-radio-inner--first">
-                      <input type="radio" value="deliv-by-ship" id="deliv-by-ship" name="delivery-method" class="checkout__form-item-input-radio">
-                      <i class="fas fa-shipping-fast"></i>
-                      <span class="checkout__form-item-input-radio-value">Ship</span>
-                    </p>
-                    <p class="checkout__form-item-input-radio-inner">
-                      <input type="radio" value="pick-up" id="pick-up" name="delivery-method"  class="checkout__form-item-input-radio">
-                      <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                      <span class="checkout__form-item-input-radio-value">Pick up</span>
+                <p class="checkout__form-item-description">
+                  All transactions are secure and encrypted.
+                </p>
+                <div class="checkout__form-item-credit-cards">
+                  <div class="checkout__form-item-credit-cards-caption">
+                    <div class="checkout__form-item-credit-cards-1"></div>
+                    <div class="checkout__form-item-credit-cards-list">
+                      <span><i class="fab fa-cc-visa"></i></span>
+                      <span><i class="fab fa-cc-mastercard"></i></span>
+                      <span><i class="fab fa-cc-amex"></i></span>
+                    </div>
+                  </div>
+                  <div class="checkout__form-item-credit-cards-content">
+                    <div class="checkout__form-item-credit-cards-image-wrap"></div>
+                    <p class="checkout__form-item-credit-cards-description">
+                      After clicking “Complete order”, you will be redirected to PayPlus to complete your purchase securely.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="checkout__form-item checkout__form-item--shipping-address">
-                <h3 class="checkout__form-item-title">
-                  Shipping address
+              <div class="checkout__form-item">
+                <h3 class="checkout__form-item-title checkout__form-item-title--no-margin">
+                  Billing address
                 </h3>
-                <div class="checkout__form-item-input-block-wrap">
+                <p class="checkout__form-item-description">
+                  Select the address that matches your card or payment method.
+                </p>
+                <div class="checkout__form-item-input-radio-block checkout__form-item-input-block--deliv-meth">
+                  <p class="checkout__form-item-input-radio-inner checkout__form-item-input-radio-inner--first">
+                    <input type="radio" value="same-address" id="same-address" name="billing-address" class="checkout__form-item-input-radio">
+                    <span class="checkout__form-item-input-radio-value">Same as shipping address</span>
+                  </p>
+                  <p class="checkout__form-item-input-radio-inner">
+                    <input checked type="radio" value="other-address" id="other-address" name="billing-address"  class="checkout__form-item-input-radio">
+                    <span class="checkout__form-item-input-radio-value">Use a different billing address</span>
+                  </p>
+                </div>
+                <div class="checkout__form-item-input-block-wrap checkout__form-item-input-block-wrap--billing">
                   <div class="checkout__form-item-input-group">
                     <input required type="text" name="first-name" id="first-name" placeholder="First name" class="checkout__form-item-input-text">
                     <input required type="text" name="last-name" id="last-name" placeholder="Last name"  class="checkout__form-item-input-text">
@@ -192,7 +240,7 @@
                   <div class="checkout__form-item-input-group">
                     <input required type="text" name="postal-code" id="postal-code" placeholder="Postal code"  class="checkout__form-item-input-text">  
                     <input required type="text" name="city" id="city" placeholder="City"  class="checkout__form-item-input-text"> 
-                  </div>  
+                  </div> 
                   <select size="1" autocomplete="billing country" data-backup="country" class="checkout__form-item-input-text" aria-required="true" name="checkout[billing_address][country]" id="checkout_billing_address_country" placeholder="Country/Region"><option data-code="IL" value="Israel">Israel</option>
                     <option data-code="KR" value="South Korea">South Korea</option>
                     <option data-code="US" value="United States">United States</option>
@@ -436,7 +484,8 @@
                     <option data-code="EH" value="Western Sahara">Western Sahara</option>
                     <option data-code="YE" value="Yemen">Yemen</option>
                     <option data-code="ZM" value="Zambia">Zambia</option>
-                    <option data-code="ZW" value="Zimbabwe">Zimbabwe</option></select>   
+                    <option data-code="ZW" value="Zimbabwe">Zimbabwe</option></select> 
+                  <input required type="text" name="country" id="country" placeholder="Country/Region"  class="checkout__form-item-input-text">  
                   <input required type="tel" name="phone" id="persons-phone" placeholder="Phone"  class="checkout__form-item-input-text">
                   <div class="checkout__form-item-input-block">
                     <input type="checkbox" name="save-shippng-info" id="save-shippng-info" class="checkout__form-item-input-checkbox">
@@ -445,9 +494,9 @@
                 </div>
               </div>
               <div class="checkout__form-sumit-block">
-                <button class="checkout__form-submit-btn">Continue to shipping</button>
+                <button class="checkout__form-submit-btn">Complete order</button>
               </div>
-              <a href="index.html" class="checkout__form-link-back"><span>< &nbsp;</span>Return to card</a>
+              <a href="shipping.html" class="checkout__form-link-back"><span>< &nbsp;</span>Return to shipping</a>
             </form>
           </div>
         </section>

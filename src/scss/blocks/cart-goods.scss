@@ -5,6 +5,9 @@
   transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   z-index: 151;
   height: 100vh;
+  &--checkout{
+    height: auto;
+  }
   &--main{
     display: none;
     position: fixed;
@@ -42,7 +45,7 @@
     align-items: center;
     height: 70px;
     padding: 45px 0;
-    border-bottom: 1px solid #e8e8e1;
+    border-bottom: 1px solid $bdr-color;
   }
   &__close-button{
     cursor: pointer;
@@ -58,7 +61,7 @@
     font-size: 1.4rem;
     font-family: $content-ff;
     letter-spacing: 0.2rem;
-    border-bottom: 1px solid #e8e8e1;
+    border-bottom: 1px solid $bdr-color;
   }
   &__item-link{
     display: flex;
@@ -107,7 +110,7 @@
     display: block;
     box-sizing: border-box;
     padding: 0 3px;
-    border: 1px solid #e8e8e1;
+    border: 1px solid $bdr-color;
     width: 20px;
   }
   &__item-counter-minus:hover,
@@ -121,8 +124,8 @@
     width: 25px;
     border-left: none;
     border-right: none;
-    border-top: 1px solid #e8e8e1;
-    border-bottom: 1px solid #e8e8e1;
+    border-top: 1px solid $bdr-color;
+    border-bottom: 1px solid $bdr-color;
   }
   &__item-price{
     text-transform: uppercase;
@@ -138,7 +141,7 @@
     font-size: 1.5rem;
   }
   &__order-comment textarea{
-    border: 1px solid #e8e8e1;
+    border: 1px solid $bdr-color;
   }
   &__order-comment-text{
     margin-bottom: 25px;
@@ -146,7 +149,7 @@
   }
   &__summation{
     padding-top: 25px;
-    border-top: 1px solid #e8e8e1;
+    border-top: 1px solid $bdr-color;
     font-size: 1.6rem;
   }
   &__summation-data{
@@ -192,9 +195,18 @@
   }
 }
 //стили для checkout
+.cart-goods__outer-wrap{
+  display: none;
+  background-color: rgb(243, 243, 243);
+  color: rgb(84, 84, 84);
+}
+.cart-goods__outer-wrap--open{
+  display: block;
+}
 .cart-goods--checkout{
   background-color: rgb(243, 243, 243);
   color: rgb(84, 84, 84);
+  overflow: initial;
 }
 .cart-goods--checkout .cart-goods{
   &__item{
@@ -269,7 +281,7 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 30px;
-    border-bottom: 1px solid #e8e8e1;
+    border-bottom: 1px solid $bdr-color;
   }
   &__shipping-title{
     display: flex;
@@ -293,11 +305,30 @@
     line-height: 1.5;
     text-align: center;
   }
+  &__summation-total{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+  }
+  &__total-title{
+    font-size: 1.7rem;
+  }
+  &__total-value{
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }
 @media only screen and (min-width: 769px){
   .cart-goods{
     &--main{
       width: 400px;
     }
+  }
+}
+@media only screen and (min-width: 1000px){
+  .cart-goods__outer-wrap{
+    display: block;
   }
 }

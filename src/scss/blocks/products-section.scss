@@ -50,7 +50,7 @@
     font-size: 1.8rem;
     font-family: $content-ff;
     line-height: 1.2;
-    border: 1px solid #e8e8e1;
+    border: 1px solid $bdr-color;
   }
   &__list{
     display: flex;
@@ -65,7 +65,7 @@
     margin: 0 auto;
     text-align: center;
     font-size: 1.9rem;
-    border: 1px solid #e8e8e1;
+    border: 1px solid $bdr-color;
   }
 }
 @media only screen and (min-width: 480px){

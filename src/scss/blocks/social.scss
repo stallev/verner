@@ -21,6 +21,15 @@
     font-weight: 400;
   }
 }
+.social--collabs .social__list{
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $bdr-color;
+}
 @media only screen and (min-width: 769px){
   .social{
     &__list{

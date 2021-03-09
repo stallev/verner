@@ -90,7 +90,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      border-bottom: 1px solid #e8e8e1;
+      border-bottom: 1px solid $bdr-color;
     }
   }
   &__nav-menu-hidden-link{
@@ -112,7 +112,7 @@
   &__mobile-menu-social-item{
     flex: 0 1 33.33%;
     text-align: center;
-    border: 1px solid #e8e8e1;
+    border: 1px solid $bdr-color;
     margin: 0 0 -1px;
     & a{
       display: block;
@@ -141,7 +141,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      border-bottom: 1px solid #e8e8e1;
+      border-bottom: 1px solid $bdr-color;
     }
   }
   &__bottom-logotype-link{
@@ -222,7 +222,7 @@
       display: block;
       justify-content: flex-end;
       padding-bottom: 10px;
-      border-bottom: 1px solid #e8e8e1;
+      border-bottom: 1px solid $bdr-color;
     }
     &__upper-social{
       display: flex;

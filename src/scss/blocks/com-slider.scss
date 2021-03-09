@@ -1,0 +1,161 @@
+.com-slider__wrap{
+  width: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.com-slider__sec{
+  display: none;
+}
+.com-slider{
+  &__main{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+  }
+  &__main{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  &__main-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 20%;
+  }
+  &__main .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  &__main .slick-dots button{
+    display: block;
+    margin: 0 5px;
+    box-sizing: border-box;
+    font-size: 0;
+    padding: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(189, 172, 172);
+  }
+  &__main .slick-active button{
+    background-color: rebeccapurple;
+  }
+  &__sec{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  &__sec .slick-list{
+    margin: 0 auto;
+  }
+  &__sec-item{
+    margin: 0 10px;
+    height: 25%;
+  }
+  &__sec-item img{
+    //object-fit:fill
+  }
+  //стилизация arrows в навигационном слайдере
+  &__sec .slick-arrow{
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    transform: translate(-50%, 0);
+    background-color: grey;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    z-index: 10;
+    border-color: inherit;
+    cursor: pointer;
+    &:hover{
+      background-color: red;
+    }
+    &::after,
+    &::before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 25%;
+      height: 6%;
+      background-color: #000;
+    }
+    &:hover::after,
+    &:hover::before{
+      background-color: #fff;
+    }
+  }
+  &__sec:hover .slick-arrow{
+    display: block;
+  }
+  &__sec-prev{
+    left: 0;
+    &::after{
+      top: 53%;
+      left: 38%;
+      transform: rotate(45deg);
+    }
+    &::before{
+      top: 33%;
+      left: 37%;
+      transform: rotate(-45deg);
+    }
+
+  }
+  &__sec-next{
+    right: -20px;
+    &::after{
+      top: 53%;
+      right: 38%;
+      transform: rotate(-45deg);
+    }
+    &::before{
+      top: 33%;
+      right: 37%;
+      transform: rotate(45deg);
+    }
+  }
+}
+.swiper-wrapper--sec{
+  display: flex;
+  align-items: flex-end;
+}
+.swiper-button-next,
+.swiper-button-prev{
+  height: 50%;
+}
+.com-slider__main--product .com-slider__main-item-img{
+  //width: 70%;
+}
+.com-slider__main--product .swiper-pagination{
+  bottom: 5px;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 769px){
+  .com-slider__sec{
+    display: block;
+  }
+  
+  .product-modal-quick .com-slider__main-item{
+    padding: 0 25%;
+  }
+  //позиционирование модального окна
+  .swal-modal.product-modal-quick{
+    position: absolute;
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .swal-overlay{
+    //position: relative;
+  }
+}

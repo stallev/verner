@@ -34,11 +34,34 @@ div.container--footer{
 }
 .container--hide{
   //display: none;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
 }
-.product-modal{
-  // position: fixed;
-  // top: 100px;
-  // display: none;
+.container--checkout{
+  &-mobile-header,
+  &-toggle,
+  &-selected-goods,
+  &-delivery-info,
+  &-footer{
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+.container--checkout-footer{
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  border-top: 1px solid $bdr-color;
+}
+.container--checkout{
+  &-selected-goods{
+    background-color: rgb(243, 243, 243);
+    color: rgb(84, 84, 84);
+  }
 }
 .clearfix:after {content: '.'; display: block; height: 0; clear: both; visibility: hidden}
 .image-section{

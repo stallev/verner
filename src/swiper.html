@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+
+  
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Demo styles -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="container">
+    <div class="com-slider__wrap">
+      <div class="com-slider">
+        <div class="swiper-container com-slider__main">
+          <div class="swiper-wrapper">
+            <div class="com-slider__main-item swiper-slide">
+              <img src="../img/content/big/1b.jpg" alt="" class="com-slider__main-item-img">
+            </div>
+            <div class="com-slider__main-item swiper-slide">
+              <img src="../img/content/big/2b.jpg" alt="" class="com-slider__main-item-img">
+            </div>
+            <div class="com-slider__main-item swiper-slide">
+              <img src="../img/content/big/3b.jpg" alt="" class="com-slider__main-item-img">
+            </div>
+            <div class="com-slider__main-item swiper-slide">
+              <img src="../img/content/big/4b.jpg" alt="" class="com-slider__main-item-img">
+            </div>
+      
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+        <div class="swiper-container com-slider__sec">
+          <div class="swiper-wrapper">
+            <div class="com-slider__sec-item swiper-slide">
+              <img src="../img/content/small/1s.jpg" alt="" class="com-slider__sec-item-img">
+            </div>
+            <div class="com-slider__sec-item swiper-slide">
+              <img src="../img/content/small/2s.jpg" alt="" class="com-slider__sec-item-img">
+            </div>
+            <div class="com-slider__sec-item swiper-slide">
+              <img src="../img/content/small/3s.jpg" alt="" class="com-slider__sec-item-img">
+            </div>
+            <div class="com-slider__sec-item swiper-slide">
+              <img src="../img/content/small/4s.jpg" alt="" class="com-slider__sec-item-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Swiper JS -->
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+  <script>
+    $('#zoom_01-big').elevateZoom();
+    $('#zoom_02-big').elevateZoom();
+    $('#zoom_03-big').elevateZoom();
+    $('#zoom_04-big').elevateZoom();
+    $('#zoom_01').elevateZoom();
+    $('#zoom_02').elevateZoom();
+    $('#zoom_03').elevateZoom();
+    $('#zoom_04').elevateZoom();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/vendors.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var galleryThumbs = new Swiper('.com-slider__sec', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    loop: true,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.com-slider__main', {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 5, //looped slides should be the same
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
+  </script>
+</body>
+
+</html>

@@ -1,9 +1,14 @@
 .breadcrumbs{
+  color: rgb(51, 51, 51);
   &__list{
     display: flex;
     width: fit-content;
     &--shop{
       margin: 0 auto;
+    }
+    &--checkout{
+      font-size: 1.5rem;
+      padding: 20px 0 35px;
     }
     &--product{
       text-align: center;
@@ -16,7 +21,13 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.2;
-    color: #000;
+    &--checkout{
+      padding: 0 5px;
+      &-current{
+        color: #000;
+        font-weight: 700;
+      }
+    }
   }
 }
 @media only screen and (min-width: 769px){

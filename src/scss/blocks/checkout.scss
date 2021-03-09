@@ -1,0 +1,324 @@
+.checkout{
+  color: rgb(51, 51, 51);
+  &__mobile-header{
+    padding: 5px 0;
+  }
+  &__title{
+    display: block;
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 2.3rem;
+  }
+  &__toggle-block{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $bdr-color;
+    border-top: 1px solid $bdr-color;
+    background-color: rgb(243, 243, 243);
+    color: rgb(84, 84, 84);
+  }
+  &__toggle-content{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 25px 0;
+    cursor: pointer;
+  }
+  &__toggle-text-wrap{
+    display: flex;
+    font-size: 1.4rem;
+  }
+  &__toggle-value{
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__form--delivery{
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    &--cards{
+      margin-bottom: 60px;
+    }
+  }
+  &__form-item-title{
+    padding: 15px 0 14px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    &--no-margin{
+      padding-bottom: 5px;
+    }
+  }
+  &__form-item-input-group{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__form-item-input-text{
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid $bdr-color;
+    border-radius: 4px;
+    font-size: 1.7rem;
+  }
+  &__form-item-input-checkbox{
+    display: inline-block;
+    font-size: 1.9rem;
+    color: #000;
+    margin-right: 15px;
+  }
+  &__form-item-label-text-checkbox{
+    font-size: 1.5rem;
+  }
+  &__form-item-input-radio-inner{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: 1px solid $bdr-color;
+    font-size: 1.7rem;
+    &--first{
+      border-bottom: 0;
+    }
+  }
+  &__form-item-input-radio{
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+  }
+  &__form-item-input-radio-value{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &__form-submit-btn{
+    display: block;
+    width: fit-content;
+    padding: 15px 30px;
+    margin: 5px 0 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+  }
+  
+  &__form-link-back{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  &__footer-nav{
+    display: flex;
+  }
+  &__footer-nav-link{
+    display: inline-block;
+    width: fit-content;
+    margin-right: 25px;
+    font-size: 1.3rem;
+  }
+  //shipping.html
+  &__form-item--delivery-summation{
+    padding: 0 20px;
+    border: 1px solid $bdr-color;
+    border-radius: 4px;
+  }
+  &__form-item-summation-outer{
+    display: flex;
+    padding: 14px 5px;
+    &--first{
+      border-bottom: 1px solid $bdr-color;
+    }
+  }
+  &__form-item-summation-item-name{
+    display: block;
+    width: 90px;
+    font-size: 1.6rem;
+  }
+  &__form-item-summation-item-value{
+    display: block;
+    font-size: 1.6rem;
+    flex-grow: 2;
+    margin-right: 10px;
+    &--no-grow{
+      flex-grow: 0;
+    }
+  }
+  &__form-item-summation-item-change{
+    display: block;
+    width: fit-content;
+    font-size: 1.8rem;
+  }
+  &__form-item--shipping-method{
+    margin-bottom: 30px;
+  }
+  &__form-item-summation-item-change-ship-price{
+    display: block;
+    margin-left: 15px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+  &__form-item--delivery-payment-summation{
+    padding: 0 20px;
+    border: 1px solid $bdr-color;
+    border-radius: 4px;
+    margin-bottom: 60px;
+  }
+  &__promocode-form-out-wrap{
+    margin-bottom: 40px;
+  }
+  &__promocode-form-inner-wrap{
+   display: flex;;
+  }
+  &__promocode-value{
+    display: block;
+    flex-grow: 2;
+    margin-right: 20px;
+    padding: 10px 25px;
+    font-size: 1.7rem;
+    border-radius: 4px;
+    border: 1px solid $bdr-color;
+  }
+  &__promocode-btn{
+    display: block;
+    width: fit-content;
+    padding: 10px 15px;
+    font-size: 1.8rem;
+    border-radius: 4px;
+    background-color: rgb(204, 204, 204);
+    color: #fff;
+  }
+  &__form-item-description{
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+  }
+  &__form-item-credit-cards{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $bdr-color;
+    border-radius: 9px;
+  }
+  &__form-item-credit-cards-caption{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $bdr-color;
+  }
+  &__form-item-credit-cards-1{
+    width: 40%;
+    background-image: url(../img/decor/credit-title.webp);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+  }
+  &__form-item-credit-cards-list{
+    display: flex;
+  }
+  &__form-item-credit-cards-list span{
+    display: block;
+    font-size: 4rem;
+    width: 60px;
+  }
+  &__form-item-credit-cards-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(207, 204, 204);
+  }
+  &__form-item-credit-cards-image-wrap{
+    width: 163px;
+    height: 81px;
+    background-image: url(../img/decor/credit-card.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  &__form-item-credit-cards-description{
+    padding: 20px 90px;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  &__form-item-input-block-wrap--billing{
+    display: none;
+    padding: 10px;
+    background-color: rgb(241, 244, 245);
+  }
+}
+.checkout__form-item-input-block-wrap--billing{
+  display: none;
+}
+.store-title{
+  display: none;
+}
+.container--checkout-toggle{
+  position: relative;
+  padding-left: 10px;
+  & i{
+    display: inline;
+    font-size: 1.8rem;
+    margin-right: 15px;
+  }
+}
+.container--checkout-toggle .checkout__toggle-text--hide{
+  display: block;
+}
+.container--checkout-toggle .checkout__toggle-text--open{
+  display: none;
+}
+.container--checkout-toggle-close .checkout__toggle-text--hide{
+  display: none;
+}
+.container--checkout-toggle-close .checkout__toggle-text--open{
+  display: block;
+}
+@media only screen and (min-width: 550px){
+  .checkout{
+    &__form-item-input-group{
+      justify-content: space-between;
+    }
+    &__form-item-input-group input{
+      width: 49%;
+    }
+  }
+}
+@media only screen and (min-width: 1000px){
+  .main--checkout{
+    display: flex;
+  }
+  .checkout__delivery-content{
+    order: 1;
+    width: 50%;
+  }
+  .container--checkout-delivery-info{
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .container--checkout-selected-goods{
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .cart-goods__outer-wrap{
+    width: 50%;
+    order: 2;
+  }
+  .checkout{
+    &__mobile-header,
+    &__toggle-block{
+      display: none;
+    }
+  }
+  .store-title{
+    display: block;
+  }
+}

@@ -26,7 +26,7 @@
 .link-hover-underline{
   position: relative;
   display: inline-block;
-  border-bottom: 1px solid #e8e8e1;
+  border-bottom: 1px solid $bdr-color;
   cursor: pointer;
   &--nav{
     border-bottom: none;
