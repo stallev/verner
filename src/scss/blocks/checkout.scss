@@ -30,6 +30,16 @@
     display: flex;
     font-size: 1.4rem;
   }
+  &__toggle-text{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+  }
+  &__toggle-text i{
+    display: block;
+    margin-left: 20px;
+    font-size: 1.7rem;
+  }
   &__toggle-value{
     font-size: 2.1rem;
     font-weight: 700;
@@ -46,6 +56,9 @@
     &--cards{
       margin-bottom: 60px;
     }
+  }
+  &__form-item--pick-up-delivery-method{
+    display: none;
   }
   &__form-item-title{
     padding: 15px 0 14px;
@@ -67,7 +80,7 @@
     width: 100%;
     border: 1px solid $bdr-color;
     border-radius: 4px;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   &__form-item-input-checkbox{
     display: inline-block;
@@ -78,19 +91,36 @@
   &__form-item-label-text-checkbox{
     font-size: 1.5rem;
   }
-  &__form-item-input-radio-inner{
+  &__form-item-input-radio-label{
     display: flex;
+    position: relative;
+    width: 100%;
     align-items: center;
-    padding: 12px 15px;
+    padding: 12px 0 12px 40px;
     border-radius: 4px;
     border: 1px solid $bdr-color;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    &::before{
+      position: absolute;
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 14px;
+      transform: translate(0, -50%);
+      border: 1px solid gray;
+      border-radius: 50%;
+    }
     &--first{
       border-bottom: 0;
     }
   }
   &__form-item-input-radio{
-    display: block;
+    display: none;
     width: 12px;
     height: 12px;
     margin-right: 10px;
@@ -99,9 +129,30 @@
     display: inline-block;
     margin-left: 10px;
   }
+  &__form-item-input-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 30px;
+    width: 100%;
+    & h5{
+      font-size: 1.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    & p{
+      font-size: 1.2rem;
+    }
+    & span{
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
   &__form-submit-btn{
     display: block;
-    width: fit-content;
+    width: 100%;
+    text-align: center;
     padding: 15px 30px;
     margin: 5px 0 25px;
     font-size: 1.6rem;
@@ -212,6 +263,7 @@
   &__form-item-credit-cards-caption{
     display: flex;
     justify-content: space-between;
+    padding: 10px 10px;
     border-bottom: 1px solid $bdr-color;
   }
   &__form-item-credit-cards-1{
@@ -223,11 +275,12 @@
   }
   &__form-item-credit-cards-list{
     display: flex;
+    align-items: center;
   }
-  &__form-item-credit-cards-list span{
-    display: block;
-    font-size: 4rem;
-    width: 60px;
+  &__t__form-item-pay-icon{
+    margin-right: 8px;
+    height: 24px;
+    width: 38px;
   }
   &__form-item-credit-cards-content{
     display: flex;
@@ -235,7 +288,7 @@
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: rgb(207, 204, 204);
+    background-color: #ededed;
   }
   &__form-item-credit-cards-image-wrap{
     width: 163px;
@@ -254,10 +307,22 @@
     padding: 10px;
     background-color: rgb(241, 244, 245);
   }
+  &__form-item-input-block-wrap--billing-open{
+    display: block;
+  }
 }
-.checkout__form-item-input-block-wrap--billing{
-  display: none;
+label[for="pick-up-location"]::before{
+  top: 23px;
 }
+div.checkout__form-item-input-block-wrap--billing{
+  //display: block;
+}
+.checkout__delivery-content  input[type="radio"]:checked + label.checkout__form-item-input-radio-label::before{
+  width: 18px;
+  height: 18px;
+  border: 7px solid #000;
+}
+
 .store-title{
   display: none;
 }
@@ -316,6 +381,9 @@
     &__mobile-header,
     &__toggle-block{
       display: none;
+    }
+    &__form-submit-btn{
+      width: fit-content;
     }
   }
   .store-title{

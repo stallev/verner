@@ -216,6 +216,54 @@ function unblockOther(){
   }
 })();
 
+//open-close delivery variants
+(function () {
+  let shipDeleveryChoosingBtn = document.querySelector('#deliv-by-ship');
+  let pickUpChoosingBtn = document.querySelector('#pick-up');
+  let shippingForm = document.querySelector('.checkout__form-item--shipping-address');
+  let pickUpForm = document.querySelector('.checkout__form-item--pick-up-delivery-method');
+  if(pickUpChoosingBtn && pickUpForm){
+    pickUpChoosingBtn.onclick = displayPickUpForm;
+  }
+  if(shipDeleveryChoosingBtn && shippingForm){
+    shipDeleveryChoosingBtn.onclick = displayShippingForm;
+  }
+  function displayPickUpForm() {
+    shippingForm.style.display = "none";
+    pickUpForm.style.display = "block";
+  }
+  function displayShippingForm() {
+    pickUpForm.style.display = "none";
+    shippingForm.style.display = "block";
+  }
+})();
+
+
+//open-close billing address
+(function(){
+  let openOtherAddressFormBtn = document.querySelector('#other-address');
+  let closeOtherAddressFormBtn = document.querySelector('#same-address');
+  let otherAddressBilling = document.querySelector('.checkout__form-item-input-block-wrap--billing');
+  if(openOtherAddressFormBtn &&otherAddressBilling){
+    console.log('openOtherAddressFormBtn');
+    openOtherAddressFormBtn.onclick = displayOtherAddress;
+  }
+  if(closeOtherAddressFormBtn && otherAddressBilling){
+    console.log('closeOtherAddressFormBtn');
+    closeOtherAddressFormBtn.onclick = closeOtherAddress;
+  }
+  function displayOtherAddress() {
+    console.log('open form');
+    openOtherAddressFormBtn.checked = true;
+    otherAddressBilling.style.display = "block";
+
+  }
+  function closeOtherAddress() {
+    console.log('close form');
+    otherAddressBilling.style.display = "none";
+  }
+})();
+
 
 //added zoom effect
 

@@ -23,8 +23,14 @@
       <div class="checkout__toggle-content">
         <div class="checkout__toggle-text-wrap">
           <i class="fas fa-shopping-cart"></i>
-          <span class="checkout__toggle-text checkout__toggle-text--open">Show order summury</span>
-          <span class="checkout__toggle-text checkout__toggle-text--hide">Hide order summury</span>
+          <span class="checkout__toggle-text checkout__toggle-text--open">
+            Show order summury 
+            <i class="fal fa-angle-down"></i>
+          </span>
+          <span class="checkout__toggle-text checkout__toggle-text--hide">
+            Hide order summury
+            <i class="fal fa-angle-up"></i>
+          </span>
         </div>
         <span class="checkout__toggle-value">2.000.00 nis</span>
       </div>
@@ -164,16 +170,42 @@
                 </h3>
                 <div class="checkout__form-item-input-block-wrap">
                   <div class="checkout__form-item-input-radio-block checkout__form-item-input-block--deliv-meth">
-                    <p class="checkout__form-item-input-radio-inner checkout__form-item-input-radio-inner--first">
-                      <input type="radio" value="deliv-by-ship" id="deliv-by-ship" name="delivery-method" class="checkout__form-item-input-radio">
-                      <i class="fas fa-shipping-fast"></i>
-                      <span class="checkout__form-item-input-radio-value">Ship</span>
-                    </p>
-                    <p class="checkout__form-item-input-radio-inner">
+                    <div class="checkout__form-item-input-radio-block-item">
+                      <input checked type="radio" value="deliv-by-ship" id="deliv-by-ship" name="delivery-method" class="checkout__form-item-input-radio">
+                      <label for="deliv-by-ship" class="checkout__form-item-input-radio-label checkout__form-item-input-radio-inner--first">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span class="checkout__form-item-input-radio-value">Ship</span>
+                      </label>
+                    </div>
+                    <div class="checkout__form-item-input-radio-block-item">
                       <input type="radio" value="pick-up" id="pick-up" name="delivery-method"  class="checkout__form-item-input-radio">
-                      <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                      <span class="checkout__form-item-input-radio-value">Pick up</span>
-                    </p>
+                      <label for="pick-up" class="checkout__form-item-input-radio-label">
+                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        <span class="checkout__form-item-input-radio-value">Pick up</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__form-item checkout__form-item--pick-up-delivery-method">
+                <h3 class="checkout__form-item-title">
+                  Pick up locations
+                </h3>
+                <div class="checkout__form-item-input-block-wrap">
+                  <div class="checkout__form-item-input-radio-block checkout__form-item-input-block--deliv-meth">
+                    <div class="checkout__form-item-input-radio-block-item">
+                      <input checked type="radio" value="pick-up-location" id="pick-up-location" name="pick-up-location" class="checkout__form-item-input-radio">
+                      <label for="pick-up-location" class="checkout__form-item-input-radio-label checkout__form-item-input-radio-inner--first">
+                        <div class="checkout__form-item-input-content">
+                          <div>
+                            <h5>RAMAT AVIV MALL</h5>
+                            <p>40th Einstein street, store 229, Tel Aviv</p>
+                            <p>Usually ready in 2 hours</p>
+                          </div>
+                          <span>Free</span>
+                        </div>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>

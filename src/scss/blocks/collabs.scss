@@ -49,13 +49,15 @@
   .collabs{
     &-list-inner{
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     &-item{
       flex-direction: column;
       width: 30%;
+      margin-right: 3%;
       &__img-link{
         width: 100%;
+        margin-bottom: 15px;
       }
     }
     &__post-image{
