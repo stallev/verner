@@ -18,9 +18,12 @@
     margin-bottom: 20px;
   }
   &__main-item{
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     padding: 0 20%;
+  }
+  &__main-item img{
+    display: block;
   }
   &__main .slick-dots{
     display: flex;

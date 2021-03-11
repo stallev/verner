@@ -60,7 +60,7 @@
   &__sec-prev{
     left: 0;
     &::after{
-      top: 58%;
+      top: 55%;
       left: 34%;
       transform: rotate(45deg);
     }
@@ -74,7 +74,7 @@
   &__sec-next{
     right: -20px;
     &::after{
-      top: 58%;
+      top: 55%;
       right: 34%;
       transform: rotate(-45deg);
     }
@@ -99,7 +99,6 @@
       display: block;
     }
     &__main{
-      width: 70%;
       margin: 0 auto;
       margin-bottom: 40px;
     }
@@ -184,10 +183,10 @@
   }
   .product-modal .sale-slider{
     &__main{
-      width: 50%;
+      width: 60%;
     }
     &__sec{
-      width: 55%;
+      width: 70%;
     }
   }
 }

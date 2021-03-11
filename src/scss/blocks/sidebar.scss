@@ -129,6 +129,7 @@ li.sidebar__item > input[type="checkbox"]:checked + label::before{
     height: auto;
     padding-right: 5px;
     min-width: 270px;
+    height: 100%;
     margin: 0;
     z-index: 2;
     &__inner{
