@@ -42,22 +42,15 @@
     font-size: 1.8rem;
     line-height: 1.2;
   }
-  &__select-list{
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 8px 0;
-    font-size: 1.8rem;
-    font-family: $content-ff;
-    line-height: 1.2;
-    border: 1px solid $bdr-color;
-    overflow-x: hidden;
+  &__select select{
+    
     & option{
       width: 100%;
+      //font-size: 14px;
+      text-align: right;
     }
     &-item{
-      font-size: 14px;
-      text-align: right;
+      
     }
   }
   &__to-sale-link{
@@ -95,11 +88,29 @@
     }
   }
 }
+.products-section__select-list{
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 1.8rem;
+  font-family: $content-ff;
+  line-height: 1.2;
+  border: 1px solid $bdr-color;
+  overflow-x: hidden;
+}
+.products-section__select-list-item{
+  cursor: pointer;
+  font-size: 1.4rem;
+}
 @media only screen and (min-width: 480px){
   .products-section{
     &__list{
       justify-content: space-around;
     }
+  }
+  .products-section__select-list-item{
+    font-size: inherit;
   }
 }
 @media only screen and (min-width: 769px){
@@ -131,5 +142,8 @@
       max-width: 140px;
       font-size: 2.6rem;
     }
+  }
+  .products-section__select-list-item{
+    font-size: inherit;
   }
 }

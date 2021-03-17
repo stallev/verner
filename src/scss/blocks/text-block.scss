@@ -1,14 +1,40 @@
 .text-block{
   font-size: 2.2rem;
   font-weight: 400;
+  padding-bottom: 100px;
   &--shipping{
     margin-top: 50px;
-    margin-bottom: 400px;
+  }
+  &--payment{
+    margin-top: 50px;
+  }
+  &__subtitle{
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    text-align: left;
+    margin-bottom: 15px;
   }
   &__item{
     margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  &__item--payment-order{
+    padding-left: 15px;
   }
   &__item--last{
     margin-top: 25px;
+  }
+  &__item-list-item{
+    padding-left: 15px;
+  }
+}
+@media only screen and (min-width: 769px){
+  .text-block{
+    &__item--payment-order{
+      padding-left: 35px;
+    }
+    &__item-list-item{
+      padding-left: 35px;
+    }
   }
 }
