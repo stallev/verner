@@ -63,6 +63,10 @@ div.container--footer{
     color: rgb(84, 84, 84);
   }
 }
+div.container--text-block{
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
 .clearfix:after {content: '.'; display: block; height: 0; clear: both; visibility: hidden}
 .image-section{
   position: relative;
@@ -139,6 +143,10 @@ div.lazy{
   .video-frame{
     max-width: 850px;
     max-height: 500px;
+  }
+  div.container--text-block{
+    padding-top: 30px;
+    padding-bottom: 70px;
   }
 }
 @media (min-width: $tablet-width) {

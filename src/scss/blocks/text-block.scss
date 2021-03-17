@@ -1,12 +1,10 @@
 .text-block{
-  font-size: 2.2rem;
   font-weight: 400;
-  padding-bottom: 100px;
   &--shipping{
-    margin-top: 50px;
+    margin-top: 20px;
   }
   &--payment{
-    margin-top: 50px;
+    margin-top: 20px;
   }
   &__subtitle{
     text-transform: uppercase;
@@ -17,6 +15,7 @@
   &__item{
     margin-bottom: 15px;
     line-height: 1.2;
+    font-size: 2rem;
   }
   &__item--payment-order{
     padding-left: 15px;
