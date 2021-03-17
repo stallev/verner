@@ -58,6 +58,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 1.4rem;
     font-family: $content-ff;
     letter-spacing: 0.2rem;
@@ -73,6 +75,8 @@
   }
   &__item-img{
     object-fit: contain;
+    display: block;
+    height: inherit;
   }
   &__item-info{
     display: flex;
@@ -89,6 +93,14 @@
     font-weight: 400;
     letter-spacing: 0;
   }
+  &__item-vendor{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
   &__item-size{
 
   }
@@ -97,11 +109,13 @@
   }
   &__item-count-block{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   &__item-counter{
     display: flex;
+    margin-bottom: 15px;
     text-align: center;
     line-height: 1.5;
   }
@@ -128,11 +142,10 @@
     border-bottom: 1px solid $bdr-color;
   }
   &__item-price{
-    text-transform: uppercase;
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     font-size: 1.6rem;
+    font-weight: 700;
   }
   &__order-comment{
     display: flex;
@@ -252,6 +265,7 @@
   }
   &__promocode-form-inner-wrap{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px;
   }
@@ -263,6 +277,7 @@
     margin-right: 20px;
     border-radius: 8px;
     border-color: rgb(201, 199, 199);
+    margin-bottom: 15px;
   }
   &__promocode-btn{
     padding: 10px 25px;
@@ -274,7 +289,6 @@
   }
   &__summation-title{
     font-size: 1.6rem;
-    text-transform: capitalize;
     font-weight: 400;
   }
   &__summation-shipping{
@@ -285,15 +299,18 @@
   }
   &__shipping-title{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    text-transform: capitalize;
     font-size: 1.6rem;
   }
   &__shipping-text{
     margin-right: 12px;
     width: fit-content;
     font-size: 1.6rem;
+  }
+  &__shipping-value{
+    width: fit-content;
+    text-align: right;
   }
   &__shipping-about-link{
     width: 15px;
@@ -311,13 +328,16 @@
     padding: 25px 0;
     align-items: center;
   }
+  &__summation-currency{
+    text-transform: lowercase;
+  }
   &__total-title{
     font-size: 1.7rem;
   }
   &__total-value{
     font-size: 2.1rem;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: lowercase;
   }
 }
 @media only screen and (min-width: 769px){

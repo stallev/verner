@@ -1,6 +1,5 @@
 .action{
   position: relative;
-  display: block;
   display: inline-block;
   font-size: 1.1rem;
   width: fit-content;
@@ -26,6 +25,9 @@
   background: #111;
   transition: background 0.2s ease 0s;
   //transform: skewX(-20deg);
+  &--discounts{
+    letter-spacing: normal;
+  }
   &--discounts:nth-of-type(1){
     margin-right: 10px;
   }
@@ -33,6 +35,11 @@
     display: block;
     background-color: transparent;
     border: 2px solid #fff;
+    transition: background-color 1s ease-in;
+    z-index: 26;
+    &:hover{
+      background-color: #000;
+    }
   }
   &--center-redirect-left{
     display: block;
@@ -43,6 +50,9 @@
     width: 100%;
     & i{}
   }
+}
+.collections__item:hover .action--collections{
+  background-color: #000;
 }
 .action::after{
   position: absolute;
@@ -84,6 +94,9 @@
       width: fit-content;
       padding: 9px 17px 9px 35px;
       margin: 60px auto;
+    }
+    &--discounts{
+      letter-spacing: 1.3px;
     }
   }
   .action--discounts:nth-of-type(1){

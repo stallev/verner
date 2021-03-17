@@ -6,7 +6,7 @@
     margin-bottom: 7.5px;
     text-align: center;
     font-size: 1.7rem;
-    font-family: $title-ff;
+    font-family: $content-ff;
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1;
@@ -17,6 +17,7 @@
     font-size: 1.4rem;
     letter-spacing: 0.1px;
     line-height: 1.6;
+    margin-bottom: 20px;
   }
   &__form{
     display: block;
@@ -38,6 +39,7 @@
     display: block;
     width: fit-content;
     padding: 9px 23px;
+    min-width: 0;
     font-size: 1.2rem;
     color: #fff;
     background: #111;

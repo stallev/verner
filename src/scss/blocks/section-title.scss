@@ -25,16 +25,21 @@
     font-weight: 400;
     font-size: 1.5rem;
     text-transform: uppercase;
+    transition: all 1s ease-in-out;
+    &:hover{
+      background-color: #000;
+      color: #fff;
+    }
   }
   &__text{
     display: block;
-    margin: 7.5px 0;
+    margin: 15.5px 0;
     text-align: center;
     font-size: 2.49rem;
-    font-family: $title-ff;
+    font-family: $content-ff;
     font-weight: 400;
     letter-spacing: 0em;
-    line-height: 1;
+    line-height: 1.3;
     text-transform: uppercase;
   }
 }

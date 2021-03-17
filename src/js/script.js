@@ -121,12 +121,18 @@ function unblockOther(){
   //for sidebar
   let categorySidebarControl = document.querySelector('.sidebar__group__chck-category');
   let vendorSidebarControl = document.querySelector('.sidebar__group__chck-vendor');
+  let customerSidebarControl = document.querySelector('.sidebar__group__chck-customer');
+  
   if(categorySidebarControl){
     categorySidebarControl.onclick = openCloseCategoryList;
   }
   if(vendorSidebarControl){
     vendorSidebarControl.onclick = openCloseVendorList;
   }
+  if(customerSidebarControl){
+    customerSidebarControl.onclick = openCloseCustomersList;
+  }
+
   function openCloseCategoryList() {
     if (categorySidebarControl.checked != true) {
       document.querySelector('.sidebar__items-list--category').classList.add('sidebar__list--is-close');
@@ -141,6 +147,14 @@ function unblockOther(){
     }
     else {
       document.querySelector('.sidebar__items-list--vendor').classList.remove('sidebar__list--is-close');
+    }
+  }
+  function openCloseCustomersList() {
+    if (customerSidebarControl.checked != true) {
+      document.querySelector('.sidebar__items-list--customer').classList.add('sidebar__list--is-close');
+    }
+    else {
+      document.querySelector('.sidebar__items-list--customer').classList.remove('sidebar__list--is-close');
     }
   }
 })();

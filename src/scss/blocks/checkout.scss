@@ -34,10 +34,11 @@
     display: flex;
     width: fit-content;
     align-items: center;
+    text-align: left;
   }
   &__toggle-text i{
     display: block;
-    margin-left: 20px;
+    margin-left: 2px;
     font-size: 1.7rem;
   }
   &__toggle-value{
@@ -171,11 +172,14 @@
   }
   &__footer-nav{
     display: flex;
+    flex-direction: column;
+    align-items: left;
   }
   &__footer-nav-link{
     display: inline-block;
     width: fit-content;
     margin-right: 25px;
+    margin-bottom: 15px;
     font-size: 1.3rem;
   }
   //shipping.html
@@ -347,6 +351,10 @@ div.checkout__form-item-input-block-wrap--billing{
 .container--checkout-toggle-close .checkout__toggle-text--open{
   display: block;
 }
+.checkout__delivery-content label,
+.checkout__delivery-content input{
+  box-sizing: border-box;
+}
 @media only screen and (min-width: 550px){
   .checkout{
     &__form-item-input-group{
@@ -355,6 +363,10 @@ div.checkout__form-item-input-block-wrap--billing{
     &__form-item-input-group input{
       width: 49%;
     }
+    &__footer-nav{
+      flex-direction: row;
+    }
+    &__footer-nav-link{}
   }
 }
 @media only screen and (min-width: 1000px){

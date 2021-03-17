@@ -1,8 +1,11 @@
 .product-card{
   position: relative;
   width: 80%;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
   display: block;
+  box-shadow: 4px 4px 8px 0px rgba(231, 233, 234, 0.2);
+  padding: 2%;
+  box-sizing: border-box;
   &__mark{
     position: absolute;
     display: block;
@@ -72,7 +75,7 @@
     align-items: baseline;
     font-size: 1.5rem;
     color: #1c1d1d;
-    text-transform: uppercase;
+    text-transform: lowercase;
   }
   &__price-value{
     display: block;

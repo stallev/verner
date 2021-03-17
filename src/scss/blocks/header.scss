@@ -20,9 +20,10 @@
   }
   &__search-input{
     display: block;
+    box-sizing: border-box;
     padding: 10px 15px;
     font-size: 2rem;
-    flex-grow: 1;
+    width: calc(100% - 72px);
     border: 1px solid gray;
     border-radius: 8px;
   }
@@ -95,9 +96,12 @@
   }
   &__nav-menu-hidden-link{
     display: block;
-    width: 100%;
+    width: fit-content;
     text-transform: uppercase;
     padding-left: 20px;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__nav-menu-hidden-item--logging{
     line-height: 5rem;
@@ -107,10 +111,9 @@
   }
   &__mobile-menu-social{
     display: flex;
-    margin-left: 25px;
   }
   &__mobile-menu-social-item{
-    flex: 0 1 33.33%;
+    flex: 1 1 50%;
     text-align: center;
     border: 1px solid $bdr-color;
     margin: 0 0 -1px;

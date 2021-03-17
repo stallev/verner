@@ -1,5 +1,5 @@
 .collections{
-  padding: 40px 0;
+  padding-bottom: 40px;
   &__list{
     display: flex;
     justify-content: center;
@@ -54,9 +54,10 @@
   &__section-title{
     margin-bottom: 8px;
     text-align: center;
-    font-family: $title-ff;
+    font-family: $content-ff;
     font-weight: 400;
     font-size: 2.2rem;
+    text-transform: uppercase;
   }
   &__item-description{
     margin-bottom: 8px;
